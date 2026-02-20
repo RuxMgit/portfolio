@@ -27,7 +27,7 @@
 
 <T.PerspectiveCamera
         makeDefault
-        position={[0, 0, 60]}
+        position={[0, 0, 80]}
         oncreate={(ref) => {
         ref.lookAt(0, 0, 0)
     }}
@@ -46,15 +46,15 @@
                 position={[0, 0, 3]}
                 rotation.x={-0.05}
                 rotation.y={0.4}
-                scale={25}
+                scale={55}
         >
             <T.PlaneGeometry/>
             <T.MeshBasicMaterial
-                map={$texture}
-                transparent={true}
-                side={DoubleSide}
-                depthWrite={false}
-                color="#135bc2"
+                    map={$texture}
+                    transparent={true}
+                    side={DoubleSide}
+                    depthWrite={false}
+                    color="#135bc2"
             />
         </T.Mesh>
 
@@ -62,7 +62,7 @@
                 text="Eliott Morisset"
                 anchorX="50%"
                 anchorY="50%"
-                fontSize={8}
+                fontSize={20}
                 font="/public/fonts/AlmendraDisplay-Regular.ttf"
                 letterSpacing={-0.05}
                 scale={scale.current}

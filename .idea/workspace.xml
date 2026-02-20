@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/portfolio/public/fonts/AlmendraDisplay-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/i18n.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portfolio/src/locales/fr-FR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Add translations, title and topbar prototype">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/Counter.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,29 +42,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.localhost:5173.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ruxm/Documents/portfolio/portfolio/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.vue",
-    "ts.external.directory.path": "/home/ruxm/Documents/portfolio/portfolio/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.localhost:5173.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ruxm/Documents/S4/complement_web/SAE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.vue&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/ruxm/Documents/portfolio/portfolio/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/portfolio/public" />
       <recent name="$PROJECT_DIR$/portfolio/public/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/src/assets" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.localhost:5173">
@@ -116,7 +110,8 @@
       <workItem from="1745667245653" duration="821000" />
       <workItem from="1771493505971" duration="15387000" />
       <workItem from="1771532881862" duration="134000" />
-      <workItem from="1771579411308" duration="951000" />
+      <workItem from="1771579411308" duration="3712000" />
+      <workItem from="1771583287580" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -126,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771494969471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add translations, title and topbar prototype">
+      <option name="closed" value="true" />
+      <created>1771580385775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771580385775</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Add translations, title and topbar prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add translations, title and topbar prototype" />
   </component>
 </project>
