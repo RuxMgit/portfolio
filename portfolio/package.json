@@ -17,5 +17,15 @@
     "svelte-check": "^4.3.4",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
+    "@threlte/core": "^8.3.1",
+    "@threlte/extras": "^9.7.1",
+    "@threlte/rapier": "^3.2.0",
+    "@types/three": "^0.183.0",
+    "@xyflow/svelte": "^1.5.1",
+    "svelte-i18n": "^4.0.1",
+    "three": "^0.183.0"
   }
 }

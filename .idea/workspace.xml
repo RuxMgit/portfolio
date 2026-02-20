@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/portfolio/public/fonts/AlmendraDisplay-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/i18n.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/locales/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/locales/fr-FR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/Counter.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,13 @@
         <option value="DarkModeSwitch" />
         <option value="EducationCarf" />
         <option value="NameTitle" />
+        <option value="TypeScript File" />
+        <option value="FirstScene" />
+        <option value="Scene" />
+        <option value="TopBar" />
+        <option value="Background" />
+        <option value="DotPattern" />
+        <option value="LinePattern" />
       </list>
     </option>
   </component>
@@ -37,18 +56,26 @@
     "JavaScript Debug.localhost:5173.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/ruxm/Documents/portfolio",
+    "last_opened_file_path": "/home/ruxm/Documents/portfolio/portfolio/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.vue",
     "ts.external.directory.path": "/home/ruxm/Documents/portfolio/portfolio/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/public" />
+      <recent name="$PROJECT_DIR$/portfolio/public/fonts" />
+    </key>
+  </component>
   <component name="RunManager" selected="JavaScript Debug.localhost:5173">
     <configuration name="localhost:5173" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5173/">
       <method v="2" />
@@ -87,11 +114,26 @@
       <workItem from="1745600460301" duration="394000" />
       <workItem from="1745600980485" duration="994000" />
       <workItem from="1745667245653" duration="821000" />
-      <workItem from="1771493505971" duration="1450000" />
+      <workItem from="1771493505971" duration="15387000" />
+      <workItem from="1771532881862" duration="134000" />
+      <workItem from="1771579411308" duration="951000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1771494969471</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771494969471</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
