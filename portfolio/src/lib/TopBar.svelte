@@ -1,4 +1,11 @@
 <script lang="ts">
+    import GlitchButton from "./utils/GlitchButton.svelte";
+
+    let {onButtonClick} = $props()
+
+    function handleButtonClick(buttonPath: String){
+        onButtonClick(buttonPath)
+    }
 
 </script>
 
@@ -30,7 +37,7 @@
 
 <nav class="navBar">
     <div class="nav-item">
-        <span class="nav-text"> ELEMENT 1 </span>
+        <GlitchButton buttonText="Projets" onClick={handleButtonClick} buttonPath="projects"/>
     </div>
 
     <div class="nav-separator"></div>

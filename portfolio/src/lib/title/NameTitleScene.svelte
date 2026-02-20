@@ -11,7 +11,7 @@
     const rotationX = new Spring(0, {stiffness: 0.05, damping: 0.5})
     const rotationY = new Spring(0, {stiffness: 0.05, damping: 0.5})
 
-    let time = 0
+    let time = $state(0)
     useTask((delta) => {
         time += delta
     })

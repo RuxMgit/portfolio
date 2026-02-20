@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Homepage final design">
+      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/utils/GlitchButton.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitle.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,8 @@
         <option value="Background" />
         <option value="DotPattern" />
         <option value="LinePattern" />
+        <option value="GlitchButton" />
+        <option value="SkyjoPreview" />
       </list>
     </option>
   </component>
@@ -114,7 +117,7 @@
       <workItem from="1771532881862" duration="134000" />
       <workItem from="1771579411308" duration="3712000" />
       <workItem from="1771583287580" duration="2237000" />
-      <workItem from="1771592979491" duration="7317000" />
+      <workItem from="1771592979491" duration="10949000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -148,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771600815700</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Homepage final design">
+      <option name="closed" value="true" />
+      <created>1771600982402</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771600982402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -3,18 +3,35 @@
     import NameTitle from "./lib/title/NameTitle.svelte";
     import TopBar from "./lib/TopBar.svelte";
 
+    const Pages = {
+        HOME : 0,
+        PROJECTS : 1
+    }
+
+    let currentPage = $state(Pages.HOME)
+
+    function changePageFromButtonClick(buttonPath : String){
+        if (buttonPath == "projects"){
+            currentPage = Pages.PROJECTS
+        }
+    }
 </script>
 
 <!--Isloading-->
 <main>
     <div>
-        <TopBar/>
+        <TopBar onButtonClick={changePageFromButtonClick}/>
     </div>
-    <div class="canvas-container">
-        <NameTitle/>
-    </div>
-
-
+    {#if (currentPage === Pages.HOME)}
+        <div class="canvas-container">
+            <NameTitle/>
+        </div>
+    {/if}
+    {#if (currentPage===Pages.PROJECTS)}
+        <div>
+            AAAAA
+        </div>
+    {/if}
 </main>
 
 <style>
