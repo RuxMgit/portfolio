@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Add translations, title and topbar prototype">
+    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Homepage final design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitle.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitle.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ruxm/Documents/S4/complement_web/SAE&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ruxm/Documents/portfolio/portfolio/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,6 +67,8 @@
       <recent name="$PROJECT_DIR$/portfolio/public/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/src/lib/title" />
+      <recent name="$PROJECT_DIR$/portfolio/src/lib" />
       <recent name="$PROJECT_DIR$/portfolio/src/assets" />
     </key>
   </component>
@@ -111,7 +113,8 @@
       <workItem from="1771493505971" duration="15387000" />
       <workItem from="1771532881862" duration="134000" />
       <workItem from="1771579411308" duration="3712000" />
-      <workItem from="1771583287580" duration="726000" />
+      <workItem from="1771583287580" duration="2237000" />
+      <workItem from="1771592979491" duration="7317000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -129,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771580385775</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made canvas big">
+      <option name="closed" value="true" />
+      <created>1771584018170</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771584018170</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Homepage final design">
+      <option name="closed" value="true" />
+      <created>1771600815700</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771600815700</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +157,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Add translations, title and topbar prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add translations, title and topbar prototype" />
+    <MESSAGE value="Made canvas big" />
+    <MESSAGE value="Homepage final design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homepage final design" />
   </component>
 </project>

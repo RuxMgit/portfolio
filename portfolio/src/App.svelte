@@ -1,6 +1,6 @@
 <script lang="ts">
     import {locale, locales, isLoading} from 'svelte-i18n'
-    import NameTitle from "./lib/NameTitle.svelte";
+    import NameTitle from "./lib/title/NameTitle.svelte";
     import TopBar from "./lib/TopBar.svelte";
 
 </script>
