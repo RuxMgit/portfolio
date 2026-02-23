@@ -2,12 +2,13 @@
     let {buttonText, onClick, buttonPath} = $props();
 
     function clickButton(){
+        history.pushState({}, '', '/' + buttonText.toLowerCase());
         onClick(buttonPath)
     }
 </script>
 
 <!-- From Uiverse.io by Awadhesh684827 -->
-<button class="btn-glitch-fill" onclick={clickButton}>
+<button class="btn-glitch-fill" onclick={clickButton} >
     <span class="text"> {buttonText}</span>
     <span class="text-decoration"> _</span>
     <span class="decoration">⇒</span>

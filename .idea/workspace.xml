@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="Homepage final design">
-      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/utils/GlitchButton.svelte" afterDir="false" />
+    <list default="true" id="de3a93f7-0632-4a60-a1fe-273de4b7cfb4" name="Changes" comment="add button and navigation preps">
+      <change afterPath="$PROJECT_DIR$/portfolio/public/projectsData/skyjoCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portfolio/src/lib/projects/Projects.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/App.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/TopBar.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/title/NameTitleScene.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/src/lib/utils/GlitchButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/src/lib/utils/GlitchButton.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +33,15 @@
         <option value="LinePattern" />
         <option value="GlitchButton" />
         <option value="SkyjoPreview" />
+        <option value="Projects" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -45,42 +51,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.localhost:5173.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ruxm/Documents/portfolio/portfolio/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.vue&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/ruxm/Documents/portfolio/portfolio/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.localhost:5173.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/ruxm/Documents/portfolio/portfolio/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/home/ruxm/Documents/portfolio/portfolio/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/portfolio/public" />
       <recent name="$PROJECT_DIR$/portfolio/public/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/portfolio/public" />
       <recent name="$PROJECT_DIR$/portfolio/src/lib/title" />
       <recent name="$PROJECT_DIR$/portfolio/src/lib" />
       <recent name="$PROJECT_DIR$/portfolio/src/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.localhost:5173">
+  <component name="RunManager" selected="npm.npm dev">
     <configuration name="localhost:5173" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5173/">
       <method v="2" />
     </configuration>
     <configuration name="npm dev" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
+      <package-json value="$PROJECT_DIR$/portfolio/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -89,6 +98,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.localhost:5173" />
+      <item itemvalue="npm.npm dev" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.localhost:5173" />
@@ -98,7 +111,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133" />
       </set>
     </attachedChunks>
   </component>
@@ -117,7 +130,15 @@
       <workItem from="1771532881862" duration="134000" />
       <workItem from="1771579411308" duration="3712000" />
       <workItem from="1771583287580" duration="2237000" />
-      <workItem from="1771592979491" duration="10949000" />
+      <workItem from="1771592979491" duration="11862000" />
+      <workItem from="1771673569764" duration="2651000" />
+      <workItem from="1771696863077" duration="1806000" />
+      <workItem from="1771698685982" duration="1898000" />
+      <workItem from="1771716483580" duration="51000" />
+      <workItem from="1771717048824" duration="1378000" />
+      <workItem from="1771765579228" duration="4228000" />
+      <workItem from="1771771139700" duration="701000" />
+      <workItem from="1771863214208" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -159,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771600982402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add button and navigation preps">
+      <option name="closed" value="true" />
+      <created>1771604626966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1771604626966</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +199,7 @@
     <MESSAGE value="Add translations, title and topbar prototype" />
     <MESSAGE value="Made canvas big" />
     <MESSAGE value="Homepage final design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage final design" />
+    <MESSAGE value="add button and navigation preps" />
+    <option name="LAST_COMMIT_MESSAGE" value="add button and navigation preps" />
   </component>
 </project>

@@ -2,6 +2,8 @@
     import {locale, locales, isLoading} from 'svelte-i18n'
     import NameTitle from "./lib/title/NameTitle.svelte";
     import TopBar from "./lib/TopBar.svelte";
+    import Projects from "./lib/projects/Projects.svelte";
+    history.pushState({}, '', '/');
 
     const Pages = {
         HOME : 0,
@@ -28,12 +30,10 @@
         </div>
     {/if}
     {#if (currentPage===Pages.PROJECTS)}
-        <div>
-            AAAAA
-        </div>
+        <Projects/>
     {/if}
 </main>
-
+AAAAA
 <style>
     main {
         display: flex;

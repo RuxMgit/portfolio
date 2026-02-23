@@ -22,11 +22,6 @@
         white-space: nowrap;
     }
 
-    .nav-text{
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-    }
-
     .nav-separator{
         height: 1px;
         background-color: white;
@@ -37,17 +32,18 @@
 
 <nav class="navBar">
     <div class="nav-item">
+        <GlitchButton buttonText="Motivations" onClick={handleButtonClick} buttonPath="projects"/>
+    </div>
+
+    <div class="nav-separator"></div>
+
+    <div class="nav-item">
         <GlitchButton buttonText="Projets" onClick={handleButtonClick} buttonPath="projects"/>
     </div>
 
     <div class="nav-separator"></div>
-    <div class="nav-item">
-        <span class="nav-text"> ELEMENT 2 </span>
-    </div>
 
-    <div class="nav-separator"></div>
     <div class="nav-item">
-        <span class="nav-text"> ELEMENT 3 </span>
+        <GlitchButton buttonText="Experience" onClick={handleButtonClick} buttonPath="projects"/>
     </div>
-
 </nav>

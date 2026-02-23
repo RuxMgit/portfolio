@@ -48,72 +48,72 @@
 
 
 <Suspense>
-    <Stars>
-        <T.PointsMaterial
-                slot="material"
-                vertexColors={true}
-                size={0.5}
-                sizeAttenuation={true}
-        />
-    </Stars>
-    <T.AmbientLight intensity={2}/>
-    <T.DirectionalLight position={[10, 10, 10]} intensity={2}/>
+    <Stars/>
+    <T.AmbientLight intensity={50}/>
+    <T.DirectionalLight position={[10, 10, 10]} intensity={20} castShadow/>
 
     <T.Group
-            rotation.x={rotationX.current}
-            rotation.y={rotationY.current}
-            position.y={Math.sin(time) * 0.5}
+        position={[0,0,0]}
     >
-        <T.Mesh
-                position={[0, 0, -50]}
-                rotation.x={0.04}
-                rotation.y={-0.4}
-                rotation.z={rotation}
-                scale={24}
-        >
-            <FakeGlowMaterial
-                    glowColor="#DE3163"
-                    glowInternalRadius={0.95}
-                    falloff={0.15}
-                    glowSharpness={0.1}
-            />
-            <T.TorusGeometry args={[1, 0.03, 16, 100]} />
-        </T.Mesh>
-        <T.Mesh
-                position={[0, 0, 10]}
-                rotation.x={-0.04}
-                rotation.y={0.4}
-                rotation.z={rotation}
-                scale={55}
-                onpointerenter={()=>{speed.target = 5}}
-                onpointerleave={()=>{speed.target = 0.1}}
-        >
-            <T.PlaneGeometry/>
-            <T.MeshBasicMaterial
-                    map={$crownTexture}
-                    transparent={true}
-                    side={DoubleSide}
-                    depthWrite={false}
-                    color="#CF9FFF"
-            />
-        </T.Mesh>
-        <!--        TITRE-->
-        <T.Mesh
-                position={[0, 45, 5]}
-                onpointerenter={() => { scale.target = 0.80 }}
-                onpointerleave={() => { scale.target = 0.70 }}
-        >
-            <T.PlaneGeometry args={[90, 20]} />
-            <T.MeshBasicMaterial transparent opacity={0} depthWrite={false} />
-        </T.Mesh>
 
         <T.Group
-                position={[-50, 82, 5]}
-                scale={scale.current}
-                scale.y={scale.current}
+                rotation.x={rotationX.current}
+                rotation.y={rotationY.current}
+                position.y={Math.sin(time) * 0.5}
+                castShadow
         >
-            <SVG src={url} />
-        </T.Group>
+            <T.Mesh
+                    position={[0, 0, -50]}
+                    rotation.x={0.04}
+                    rotation.y={-0.4}
+                    rotation.z={rotation}
+                    scale={24}
+                    castShadow
+            >
+                <FakeGlowMaterial
+                        glowColor="#DE3163"
+                        glowInternalRadius={0.95}
+                        falloff={0.15}
+                        glowSharpness={0.1}
+                />
+                <T.TorusGeometry args={[1, 0.03, 16, 100]} />
+            </T.Mesh>
+            <T.Mesh
+                    position={[0, 0, 10]}
+                    rotation.x={-0.04}
+                    rotation.y={0.4}
+                    rotation.z={rotation}
+                    scale={55}
+                    onpointerenter={()=>{speed.target = 5}}
+                    onpointerleave={()=>{speed.target = 0.1}}
+                    castShadow
+            >
+                <T.PlaneGeometry/>
+                <T.MeshBasicMaterial
+                        map={$crownTexture}
+                        transparent={true}
+                        side={DoubleSide}
+                        depthWrite={false}
+                        color="#CF9FFF"
+                />
+            </T.Mesh>
+            <!--        TITRE-->
+            <T.Mesh
+                    castShadow
+                    position={[0, 45, 5]}
+            >
+                <T.PlaneGeometry args={[90, 20]} />
+                <T.MeshBasicMaterial transparent opacity={0} depthWrite={false} />
+            </T.Mesh>
 
+            <T.Group
+                    position={[-50, 82, 5]}
+                    scale={scale.current}
+                    scale.y={scale.current}
+            >
+                <SVG src={url} />
+            </T.Group>
+
+        </T.Group>
     </T.Group>
 </Suspense>
