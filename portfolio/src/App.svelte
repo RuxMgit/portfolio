@@ -33,7 +33,7 @@
         <Projects/>
     {/if}
 </main>
-AAAAA
+
 <style>
     main {
         display: flex;

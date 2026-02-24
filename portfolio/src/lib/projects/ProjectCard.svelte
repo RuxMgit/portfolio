@@ -1,64 +1,58 @@
 <script lang="ts">
-    interface Props {
-        direction: string;
-        data: CardData;
-    }
+
 
     interface CardData {
         title: string;
         imagePath: string;
         slogan: string;
         color: string;
+        bgColor: string;
+    }
+
+    interface Props {
+        direction: string;
+        data: CardData;
     }
 
     let { direction, data }: Props = $props();
 
+    const ltr = direction === "leftToRight";
+
+    const clips = {
+        side:   ltr ? "polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%)"
+            : "polygon(0 0, 100% 0, 100% 100%, 100px 100%)",
+        dark:   ltr ? "polygon(100px 0, 100% 0, 100% 100%, 0 100%)"
+            : "polygon(0 0, calc(100% - 100px) 0, 100% 100%, 0 100%)",
+        center: ltr ? "polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0 100%)"
+            : "polygon(0 0, calc(100% - 100px) 0, 100% 100%, 100px 100%)",
+    };
 </script>
 
 <style>
-    .project-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: stretch;
-    }
-
-    .project-title{
-
-    }
-
-    .project-image{
-
-    }
-
-    .project-slogan{
-
-    }
-
-
-
+    @import './projectCard.css';
 </style>
 
-<div class="project-container">
-    {#if direction === "leftToRight"}
-        <div class="project-slogan">
-            {#if data != null}
-                {data.slogan}
-            {/if}
-        </div>
-        <div class="project-image">
-            <img src={data.imagePath}>
-        </div>
-        <div class="project-title">
-            {#if data != null}
-                {data.title}
-            {/if}
-        </div>
-    {/if}
-    {#if direction === "rightToLeft"}
-        <div class="project-title"> </div>
-        <div class="project-image"> </div>
-        <div class="project-slogan"> </div>
-    {/if}
+<div class="banner" style="background: {data.bgColor};">
+    <div class="left" style="background: {ltr ? data.color : data.bgColor}; clip-path: {ltr ? clips.side : clips.dark};">
+        {#if ltr}
+            <p>{data.slogan}</p>
+        {:else}
+            <span class="title" style="transform: rotate(30deg);">{data.title}</span>
+        {/if}
+    </div>
+
+    <div class="center" style="clip-path: {clips.center};">
+        <img src={data.imagePath} alt="preview" />
+    </div>
+
+    <div class="right" style="background: {ltr ? data.bgColor : data.color}; clip-path: {ltr ? clips.dark : clips.side};">
+        {#if ltr}
+            <span class="title" style="transform: rotate(-30deg);">{data.title}</span>
+        {:else}
+            <p>{data.slogan}</p>
+        {/if}
+    </div>
 </div>
+
+<link rel="stylesheet" href="styles.css">
+
