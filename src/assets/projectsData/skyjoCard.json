@@ -2,6 +2,6 @@
   "title" : "SkyJérome",
   "imagePath" : "./images/skyjoScreenshot.png",
   "slogan" : "Le Skyjo, en ligne avec JavaFX!",
-  "color" : "magenta",
+  "color" : "#CF9FFF",
   "bgColor" : "#690dc5"
 }

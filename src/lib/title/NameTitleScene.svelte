@@ -1,27 +1,31 @@
 <script>
     import {T, useLoader, useTask} from '@threlte/core'
+    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
     import {interactivity, FakeGlowMaterial, Suspense, Stars, SVG, CameraControls} from '@threlte/extras'
     import {Spring, Tween} from 'svelte/motion'
     import {DoubleSide, TextureLoader} from "three";
     import url from '../../assets/drawing.svg?url'
 
+    const crown = useLoader(GLTFLoader).load('./Crown.glb')
+    const nom = useLoader(GLTFLoader).load('./Nom.glb')
+
+    const crownTexture = useLoader(TextureLoader).load("./crown.png")
     interactivity()
+
     const scale = new Spring(0.70)
-
     const rotationX = new Spring(0, {stiffness: 0.05, damping: 0.5})
-    const rotationY = new Spring(0, {stiffness: 0.05, damping: 0.5})
 
+    const rotationY = new Spring(0, {stiffness: 0.05, damping: 0.5})
     let time = $state(0)
     useTask((delta) => {
         time += delta
-    })
 
+    })
     function handleMouseMove(e) {
         rotationY.target = (e.clientX / window.innerWidth - 0.5) * 0.4
         rotationX.target = (e.clientY / window.innerHeight - 0.5) * -0.4
-    }
 
-    const crownTexture = useLoader(TextureLoader).load("./crown.png")
+    }
 
     let speed = new Tween(0.1, {
         duration: 1000,
@@ -78,41 +82,37 @@
                 />
                 <T.TorusGeometry args={[1, 0.03, 16, 100]} />
             </T.Mesh>
-            <T.Mesh
-                    position={[0, 0, 10]}
-                    rotation.x={-0.04}
-                    rotation.y={0.4}
-                    rotation.z={rotation}
-                    scale={55}
-                    onpointerenter={()=>{speed.target = 5}}
-                    onpointerleave={()=>{speed.target = 0.1}}
-                    castShadow
-            >
-                <T.PlaneGeometry/>
-                <T.MeshBasicMaterial
-                        map={$crownTexture}
-                        transparent={true}
-                        side={DoubleSide}
-                        depthWrite={false}
-                        color="#CF9FFF"
-                />
-            </T.Mesh>
-            <!--        TITRE-->
-            <T.Mesh
-                    castShadow
-                    position={[0, 45, 5]}
-            >
-                <T.PlaneGeometry args={[90, 20]} />
-                <T.MeshBasicMaterial transparent opacity={0} depthWrite={false} />
-            </T.Mesh>
+            {#if $crown}
+                <T.Group
+                    rotation.x={0}
+                    rotation.y={0.5}
+                    rotation.z={0.7}
+                >
+                    <T is={$crown.scene}
+                       position={[0, 0, 0]}
+                       rotation.x={0}
+                       rotation.y={rotation}
+                       rotation.z={0}
+                       scale={10}
+                       onpointerenter={() => { speed.target = 5 }}
+                       onpointerleave={() => { speed.target = 0.1 }}
+                    />
+                </T.Group>
 
-            <T.Group
-                    position={[-50, 82, 5]}
-                    scale={scale.current}
-                    scale.y={scale.current}
-            >
-                <SVG src={url} />
-            </T.Group>
+            {/if}
+            <!--TITRE-->
+            {#if $nom}
+                <T is={$nom.scene}
+                   position={[0, 0, 0]}
+                   rotation.x={1.5}
+                   rotation.y={0}
+                   rotation.z={0}
+                   scale={60}
+                   onpointerenter={() => { speed.target = 5 }}
+                   onpointerleave={() => { speed.target = 0.1 }}
+                />
+            {/if}
+
 
         </T.Group>
     </T.Group>
