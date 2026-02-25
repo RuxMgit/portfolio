@@ -1,7 +1,7 @@
 <script>
     import {T, useLoader, useTask} from '@threlte/core'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-    import {interactivity, FakeGlowMaterial, Suspense, Stars, Environment} from '@threlte/extras'
+    import {interactivity, Text, Suspense, Stars, Environment} from '@threlte/extras'
     import {Spring, Tween} from 'svelte/motion'
     import {TextureLoader} from "three";
     import * as THREE from 'three'
@@ -59,7 +59,7 @@
 />
 
 <Suspense>
-    <Stars/>
+<!--    <Stars/>-->
 
     <T.AmbientLight intensity={1.5} color="#ffffff" />
 
@@ -81,7 +81,7 @@
         {#if $crown}
             <T.Group rotation.x={0} rotation.y={0.5} rotation.z={0.7}>
                 <T is={$crown.scene}
-                   position={[0, 0, 0]}
+                   position={[0, 2, 0]}
                    rotation.y={rotation}
                    scale={10}
                    onpointerenter={() => { speed.target = 5 }}
@@ -91,6 +91,18 @@
         {/if}
 
         {#if $nom}
+            <Text
+                    position={[-60,9,0]}
+                    text={"\uF0A1"}
+                    scale={200}
+                    font="./fonts/secretFont.otf"
+            />
+            <Text
+                    position={[56.5,9,0]}
+                    text={"\uF0A1"}
+                    scale={200}
+                    font="./fonts/secretFont.otf"
+            />
             <T is={$nom.scene}
                position={[0, 0, 0]}
                rotation.x={1.5}
@@ -105,8 +117,8 @@
                     position={[0, 0, -50]}
                     rotation.x={0.04}
                     rotation.y={-0.4}
-                    rotation.z={rotation}
-                    scale={30}
+                    rotation.z={0}
+                    scale={25}
             >
                 <T.MeshStandardMaterial
                         color="#ff69b4"
@@ -114,8 +126,14 @@
                         emissiveIntensity={5}
                         toneMapped={false}
                 />
-                <T.TorusGeometry args={[1, 0.015, 16, 100]} />
+                <T.RingGeometry args={[1, 1.015, 4]} />
             </T.Mesh>
+            <Text
+                    position={[-3.3,18,-20]}
+                    text={"\u2020"}
+                    scale={180}
+                    font="./fonts/secretFont.otf"
+            />
 
             <T.PointLight position={[0, 0, -45]} intensity={300} color="#ff69b4" distance={100} />
     </T.Group>
