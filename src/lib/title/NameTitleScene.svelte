@@ -1,12 +1,12 @@
 <script>
     import {T, useLoader, useTask} from '@threlte/core'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-    import {interactivity, FakeGlowMaterial, Suspense, Stars, SVG, CameraControls} from '@threlte/extras'
+    import {interactivity, FakeGlowMaterial, Suspense, Stars, Environment, CameraControls} from '@threlte/extras'
     import {Spring, Tween} from 'svelte/motion'
-    import {DoubleSide, TextureLoader} from "three";
-    import url from '../../assets/drawing.svg?url'
+    import {TextureLoader} from "three";
+    import * as THREE from 'three'
 
-    const crown = useLoader(GLTFLoader).load('./Crown.glb')
+    const crown = useLoader(GLTFLoader).load('./IceCrown.glb')
     const nom = useLoader(GLTFLoader).load('./Nom.glb')
 
     const crownTexture = useLoader(TextureLoader).load("./crown.png")
@@ -35,11 +35,29 @@
         rotation += delta * speed.current
     })
 
-
+    $effect(() => {
+        if ($crown) {
+            const mesh = $crown.scene.getObjectByName('Crown')
+            if (mesh) {
+                const oldMat = mesh.material
+                mesh.material = new THREE.MeshPhysicalMaterial({
+                    map: oldMat.map,
+                    color: new THREE.Color(0xadd8e6),
+                    roughness: 0.05,
+                    metalness: 0.0,
+                    transmission: 0.85,
+                    thickness: 2.0,
+                    ior: 1.31,
+                    envMapIntensity: 2.0,
+                })
+                mesh.renderOrder = 1
+            }
+        }
+    })
 </script>
 
 <svelte:window on:mousemove={handleMouseMove}/>
-
+<Environment format="hdr" type="pmrem" />
 <T.PerspectiveCamera
         makeDefault
         position={[0, 0, 80]}
@@ -47,7 +65,7 @@
         ref.lookAt(0, 0, 0)
     }}
 >
-<!--    <CameraControls/>-->
+    <CameraControls/>
 </T.PerspectiveCamera>
 
 
@@ -83,22 +101,15 @@
                 <T.TorusGeometry args={[1, 0.03, 16, 100]} />
             </T.Mesh>
             {#if $crown}
-                <T.Group
-                    rotation.x={0}
-                    rotation.y={0.5}
-                    rotation.z={0.7}
-                >
+                <T.Group rotation.x={0} rotation.y={0.5} rotation.z={0.7}>
                     <T is={$crown.scene}
                        position={[0, 0, 0]}
-                       rotation.x={0}
                        rotation.y={rotation}
-                       rotation.z={0}
                        scale={10}
                        onpointerenter={() => { speed.target = 5 }}
                        onpointerleave={() => { speed.target = 0.1 }}
                     />
                 </T.Group>
-
             {/if}
             <!--TITRE-->
             {#if $nom}
