@@ -2,7 +2,6 @@
     let {buttonText, onClick, buttonPath} = $props();
 
     function clickButton(){
-        history.pushState({}, '', '/' + buttonText.toLowerCase());
         onClick(buttonPath)
     }
 </script>

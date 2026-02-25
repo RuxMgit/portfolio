@@ -3,7 +3,6 @@
     import NameTitle from "./lib/title/NameTitle.svelte";
     import TopBar from "./lib/TopBar.svelte";
     import Projects from "./lib/projects/Projects.svelte";
-    history.pushState({}, '', '/');
 
     const Pages = {
         HOME : 0,
