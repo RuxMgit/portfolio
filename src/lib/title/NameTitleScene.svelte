@@ -21,7 +21,7 @@
         rotationX.target = (e.clientY / window.innerHeight - 0.5) * -0.4
     }
 
-    const crownTexture = useLoader(TextureLoader).load("/crown.png")
+    const crownTexture = useLoader(TextureLoader).load("./crown.png")
 
     let speed = new Tween(0.1, {
         duration: 1000,
