@@ -1,14 +1,20 @@
 <script>
     import ProjectCard from "./ProjectCard.svelte";
-    let skyjoData = $state(null);
+    let skyjoCardData = $state(null);
+    let chuuiCardData = $state(null);
 
     fetch('/projectsData/skyjoCard.json')
         .then(r => r.json())
-        .then(data => skyjoData = data);
+        .then(data => skyjoCardData = data);
+    fetch('/projectsData/chuuiCard.json')
+        .then(r => r.json())
+        .then(data => chuuiCardData = data);
+
 
 </script>
 
 
-{#if skyjoData}
-    <ProjectCard direction="leftToRight" data={skyjoData}/>
+{#if skyjoCardData && chuuiCardData}
+    <ProjectCard direction="leftToRight" data={skyjoCardData}/>
+    <ProjectCard direction="rightToLeft" data={chuuiCardData}/>
 {/if}
