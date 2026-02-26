@@ -1,7 +1,9 @@
 {
   "title" : "SkyJérome",
-  "imagePath" : "./images/skyjoScreenshot.png",
-  "slogan" : "Le Skyjo, en ligne avec JavaFX!",
-  "color" : "#CF9FFF",
+  "imagePaths": [
+    "./images/skyjoImage.png"
+  ],
+  "slogan" : "Le Skyjo, en ligne avec JavaFX, de 2 à 8 joueur et avec la possibilité de jouer avec des robots!",
+  "color" : "white",
   "bgColor" : "#690dc5"
 }

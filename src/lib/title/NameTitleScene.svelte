@@ -1,7 +1,7 @@
 <script>
     import {T, useLoader, useTask} from '@threlte/core'
     import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-    import {interactivity, Text, Suspense, Stars, Environment} from '@threlte/extras'
+    import {interactivity, Text, Suspense, CameraControls, Environment} from '@threlte/extras'
     import {Spring, Tween} from 'svelte/motion'
     import {TextureLoader} from "three";
     import * as THREE from 'three'
@@ -57,10 +57,9 @@
         position={[0, 0, 80]}
         oncreate={(ref) => { ref.lookAt(0, 0, 0) }}
 />
+<!--<CameraControls/>-->
 
 <Suspense>
-<!--    <Stars/>-->
-
     <T.AmbientLight intensity={1.5} color="#ffffff" />
 
     <T.DirectionalLight position={[0, 50, 50]} intensity={20} color="#ffffff" />

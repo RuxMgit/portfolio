@@ -1,0 +1,9 @@
+{
+  "title" : "Flip7Counter",
+  "imagePaths": [
+    "./images/flip7Image.png"
+  ],
+  "slogan" : "Plus besoin de compter les points au Flip7 avec Jetpack Compose!",
+  "color" : "",
+  "bgColor" : "#DDA0DD"
+}

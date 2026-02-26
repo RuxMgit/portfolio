@@ -1,7 +1,9 @@
 {
     "title" : "Chuui (注意)",
-    "imagePath" : "./images/chuuiScreenshot1.png",
+    "imagePaths": [
+        "./images/chuuiImage.png"
+    ],
     "slogan" : "L'attention est un jeu et on peut le gagner",
-    "color" : "#A82221",
+    "color" : "white",
     "bgColor" : "#DB5E31"
 }

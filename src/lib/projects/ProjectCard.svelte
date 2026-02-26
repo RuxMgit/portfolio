@@ -4,7 +4,7 @@
 
     export interface CardData {
         title: string;
-        imagePath: string;
+        imagePaths: string[];
         slogan: string;
         color: string;
         bgColor: string;
@@ -19,33 +19,23 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        padding: 1.5rem 2rem;
-        border-radius: 1rem;
-        gap: 1.5rem;
-        background-color: var(--bg);
-        min-height: 160px;
         width: 100%;
+        height: 50vh;
+        min-height: 320px;
         box-sizing: border-box;
-    }
-
-    .card.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .separator {
-        width: 2px;
-        background: var(--accent);
-        border-radius: 2px;
-        opacity: 0.25;
-        align-self: stretch;
+        overflow: hidden;
+        border-radius: 1.25rem;
     }
 </style>
 
-<div
-        class="card {direction === 'rightToLeft' ? 'reverse' : ''}"
-        style="--bg: {data.bgColor}; --accent: {data.color};"
->
-    <ImageBox imagePath={data.imagePath} color={data.color} />
-    <div class="separator"></div>
-    <TextBox title={data.title} slogan={data.slogan} color={data.color} />
-</div>
+{#if direction === 'leftToRight'}
+    <div class="card">
+        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
+        <ImageBox imagePaths={data.imagePaths} color={data.color} />
+    </div>
+{:else}
+    <div class="card">
+        <ImageBox imagePaths={data.imagePaths} color={data.color} />
+        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
+    </div>
+{/if}

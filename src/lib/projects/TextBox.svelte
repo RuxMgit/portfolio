@@ -2,61 +2,68 @@
     export let title: string = "";
     export let slogan: string = "";
     export let color: string = "#000";
+    export let bgColor: string = "transparent";
 </script>
 
 <style>
     .text-box {
-        flex: 1;
+        flex: 0 0 50%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 0.25rem 0;
+        justify-content: space-between;
+        padding: 2.5rem 3rem;
+        box-sizing: border-box;
+        background: var(--bg);
     }
 
-    .title-line {
-        height: 10px;
-        border-radius: 99px;
-        background: var(--c);
-        width: 70%;
-        opacity: 0.85;
-    }
-
-    .slogan-line {
-        height: 7px;
-        border-radius: 99px;
-        background: var(--c);
-        width: 50%;
-        opacity: 0.4;
-    }
+    .top { display: flex; flex-direction: column; gap: 0.75rem; }
+    .bottom { display: flex; flex-direction: column; gap: 0.5rem; }
 
     h2 {
         margin: 0;
-        font-size: 1.1rem;
-        font-weight: 700;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 800;
         color: var(--c);
-        line-height: 1.2;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
     }
 
     p {
         margin: 0;
-        font-size: 0.875rem;
-        color: color-mix(in srgb, var(--c) 70%, #555);
-        line-height: 1.4;
+        font-size: 0.85rem;
+        color: var(--c);
+        opacity: 0.6;
+        line-height: 1.6;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
     }
+
+    .bar { border-radius: 99px; background: var(--c); }
+    .bar-title  { height: 14px; width: 80%; opacity: 0.7; }
+    .bar-title2 { height: 14px; width: 60%; opacity: 0.5; }
+    .bar-sub    { height: 7px;  width: 90%; opacity: 0.3; }
+    .bar-sub2   { height: 7px;  width: 75%; opacity: 0.2; }
+    .bar-sub3   { height: 7px;  width: 55%; opacity: 0.15; }
 </style>
 
-<div class="text-box" style="--c: {color}">
-    {#if title}
-        <h2>{title}</h2>
-    {:else}
-        <div class="title-line"></div>
-    {/if}
+<div class="text-box" style="--c: {color}; --bg: {bgColor}">
+    <div class="top">
+        {#if title}
+            <h2>{title}</h2>
+        {:else}
+            <div class="bar bar-title"></div>
+            <div class="bar bar-title2"></div>
+        {/if}
+    </div>
 
-    {#if slogan}
-        <p>{slogan}</p>
-    {:else}
-        <div class="slogan-line"></div>
-        <div class="slogan-line" style="width: 40%; opacity: 0.3;"></div>
-    {/if}
+    <div class="bottom">
+        {#if slogan}
+            <p>{slogan}</p>
+        {:else}
+            <div class="bar bar-sub"></div>
+            <div class="bar bar-sub2"></div>
+            <div class="bar bar-sub3"></div>
+        {/if}
+    </div>
 </div>
