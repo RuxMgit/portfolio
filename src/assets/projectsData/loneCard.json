@@ -3,7 +3,7 @@
   "imagePaths": [
     "./images/loneHomePage.png"
   ],
-  "slogan" : "Revendeur de vêtements streetwear avec un site en PHP",
+  "slogan" : "Revendeur de vêtements streetwear avec un site en PHP et une base de données relationnelle",
   "color" : "black",
   "bgColor" : "white"
 }

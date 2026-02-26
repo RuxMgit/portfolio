@@ -30,20 +30,22 @@
     }
 </style>
 
-<nav class="navBar">
-    <div class="nav-item">
-        <GlitchButton buttonText="Motivations" onClick={handleButtonClick} buttonPath="projects"/>
-    </div>
+<div class="topbar">
+    <nav class="navBar">
+        <div class="nav-item">
+            <GlitchButton buttonText="Compétences" onClick={handleButtonClick} buttonPath="competences"/>
+        </div>
 
-    <div class="nav-separator"></div>
+        <div class="nav-separator"></div>
 
-    <div class="nav-item">
-        <GlitchButton buttonText="Projets" onClick={handleButtonClick} buttonPath="projects"/>
-    </div>
+        <div class="nav-item">
+            <GlitchButton buttonText="Projets" onClick={handleButtonClick} buttonPath="projects"/>
+        </div>
 
-    <div class="nav-separator"></div>
+        <div class="nav-separator"></div>
 
-    <div class="nav-item">
-        <GlitchButton buttonText="Experience" onClick={handleButtonClick} buttonPath="projects"/>
-    </div>
-</nav>
+        <div class="nav-item">
+            <GlitchButton buttonText="Experience" onClick={handleButtonClick} buttonPath="projects"/>
+        </div>
+    </nav>
+</div>

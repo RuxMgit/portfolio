@@ -3,7 +3,7 @@
     "imagePaths": [
         "./images/judilibreImage.png"
     ],
-    "slogan" : "API de récupération des décisions juridiques en avec 3 micro-services en JavaScript",
-    "color" : "white",
-    "bgColor" : "#402e31"
+    "slogan" : "API de récupération des décisions juridiques en 3 micro-services avec JavaScript et MongoDB",
+    "color" : "#94A187",
+    "bgColor" : "#29524A"
 }

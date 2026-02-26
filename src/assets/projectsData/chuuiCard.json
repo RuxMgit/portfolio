@@ -3,7 +3,7 @@
     "imagePaths": [
         "./images/chuuiImage.png"
     ],
-    "slogan" : "L'attention est un jeu et on peut le gagner",
-    "color" : "white",
-    "bgColor" : "#DB5E31"
+    "slogan" : "L'attention est un jeu et on peut le gagner. Application Android de gestion des traitements liés au TDAH avec un web scraper et une API",
+    "color" : "#DB5E31",
+    "bgColor" : "#fff0bc"
 }

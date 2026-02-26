@@ -3,6 +3,7 @@
     export let slogan: string = "";
     export let color: string = "#000";
     export let bgColor: string = "transparent";
+
 </script>
 
 <style>
@@ -14,8 +15,17 @@
         justify-content: space-between;
         padding: 2.5rem 3rem;
         box-sizing: border-box;
-        background: var(--bg);
-        transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+        background: linear-gradient(110deg, var(--bg) 45%, color-mix(in srgb, var(--c) 20%, var(--bg)) 55%, var(--bg) 65%);
+        background-size: 200% 100%;
+        animation: shine 2.5s linear infinite;
+
+        transition: padding 0.4s cubic-bezier(0.22, 1, 0.34, 1);
+    }
+
+    @keyframes shine {
+        from { background-position: 0 0; }
+        to   { background-position: -200% 0; }
     }
 
     .card:hover .text-box {
