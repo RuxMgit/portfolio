@@ -15,6 +15,11 @@
         padding: 2.5rem 3rem;
         box-sizing: border-box;
         background: var(--bg);
+        transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .card:hover .text-box {
+        padding: 2.5rem 3.4rem;
     }
 
     .top { display: flex; flex-direction: column; gap: 0.75rem; }
@@ -27,6 +32,11 @@
         color: var(--c);
         line-height: 1.15;
         letter-spacing: -0.02em;
+        transition: letter-spacing 0.4s ease;
+    }
+
+    .text-box:hover h2 {
+        letter-spacing: -0.01em;
     }
 
     p {
@@ -37,6 +47,11 @@
         line-height: 1.6;
         text-transform: uppercase;
         letter-spacing: 0.03em;
+        transition: opacity 0.3s ease;
+    }
+
+    .text-box:hover p {
+        opacity: 0.9;
     }
 
     .bar { border-radius: 99px; background: var(--c); }
@@ -56,7 +71,6 @@
             <div class="bar bar-title2"></div>
         {/if}
     </div>
-
     <div class="bottom">
         {#if slogan}
             <p>{slogan}</p>

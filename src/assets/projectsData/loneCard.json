@@ -1,8 +1,7 @@
 {
   "title" : "Lone.",
   "imagePaths": [
-    "./images/loneHomePage.png",
-    "./images/loneProduct.png"
+    "./images/loneHomePage.png"
   ],
   "slogan" : "Revendeur de vêtements streetwear avec un site en PHP",
   "color" : "black",

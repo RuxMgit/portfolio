@@ -1,0 +1,9 @@
+{
+    "title" : "Judilibre",
+    "imagePaths": [
+        "./images/judilibreImage.png"
+    ],
+    "slogan" : "API de récupération des décisions juridiques en avec 3 micro-services en JavaScript",
+    "color" : "white",
+    "bgColor" : "#402e31"
+}

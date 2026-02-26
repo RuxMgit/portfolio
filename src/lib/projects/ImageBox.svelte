@@ -3,7 +3,6 @@
     export let color: string = "#000";
 
     $: count = imagePaths.length;
-    $: layout = count <= 1 ? 'single' : count === 2 ? 'row' : count === 3 ? 'three' : 'grid';
 </script>
 
 <style>
@@ -13,23 +12,6 @@
         overflow: hidden;
         display: flex;
     }
-
-    /* 1 image */
-    .single { flex-direction: row; }
-
-    /* 2 images côte à côte */
-    .row { flex-direction: row; }
-
-    /* 3 images : 1 grande à gauche, 2 empilées à droite */
-    .three { flex-direction: row; }
-    .three .col { display: flex; flex-direction: column; flex: 1; }
-    .three .col:first-child { flex: 1.4; }
-
-    /* 4 images : grille 2x2 */
-    .grid {
-        flex-wrap: wrap;
-    }
-    .grid .img-wrap { flex: 0 0 50%; height: 50%; }
 
     .img-wrap {
         flex: 1;
@@ -42,6 +24,11 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .image-box:hover img {
+        transform: scale(1.04);
     }
 
     .placeholder {
@@ -60,7 +47,7 @@
         background: rgba(255,255,255,0.2);
     }
 
-    .gap { display: flex; gap: 2px; width: 100%; height: 100%; }
+    .gap { display: flex; gap: 0px; width: 100%; height: 100%; }
     .gap-col { display: flex; flex-direction: column; flex: 1; gap: 2px; }
 </style>
 
