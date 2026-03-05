@@ -1,9 +1,8 @@
 <script>
     import {T, useLoader, useTask} from '@threlte/core'
-    import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-    import {interactivity, Text, Suspense, CameraControls, Environment} from '@threlte/extras'
+    import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
+    import {interactivity, Text, Suspense, CameraControls, Environment, Align} from '@threlte/extras'
     import {Spring, Tween} from 'svelte/motion'
-    import {TextureLoader} from "three";
     import * as THREE from 'three'
 
     const crown = useLoader(GLTFLoader).load('./IceCrown.glb')
@@ -14,16 +13,20 @@
     const rotationX = new Spring(0, {stiffness: 0.05, damping: 0.5})
     const rotationY = new Spring(0, {stiffness: 0.05, damping: 0.5})
     let time = $state(0)
-    useTask((delta) => { time += delta })
+    useTask((delta) => {
+        time += delta
+    })
 
     function handleMouseMove(e) {
         rotationY.target = (e.clientX / window.innerWidth - 0.5) * 0.4
         rotationX.target = (e.clientY / window.innerHeight - 0.5) * -0.2
     }
 
-    let speed = new Tween(0.1, { duration: 1000 })
+    let speed = new Tween(0.1, {duration: 1000})
     let rotation = $state(0)
-    useTask((delta) => { rotation += delta * speed.current })
+    useTask((delta) => {
+        rotation += delta * speed.current
+    })
 
     $effect(() => {
         if ($crown) {
@@ -33,12 +36,12 @@
                 mesh.material = new THREE.MeshPhysicalMaterial({
                     map: oldMat.map,
                     color: new THREE.Color(0xadd8e6),
-                    roughness: 0.05,
+                    roughness: 0.01,
                     metalness: 0.0,
                     transmission: 0.95,
-                    thickness: 2.0,
-                    ior: 1.31,
-                    envMapIntensity: 2.0,
+                    thickness: 0.5,
+                    ior: 1.50,
+                    envMapIntensity: 1.0,
                 })
                 mesh.castShadow = true
                 mesh.receiveShadow = true
@@ -46,12 +49,10 @@
             }
         }
     })
-
-
 </script>
 
 <svelte:window on:mousemove={handleMouseMove}/>
-<Environment format="hdr" type="pmrem" />
+<Environment format="hdr" type="pmrem"/>
 <T.PerspectiveCamera
         makeDefault
         position={[0, 0, 80]}
@@ -60,59 +61,59 @@
 <!--<CameraControls/>-->
 
 <Suspense>
-    <T.AmbientLight intensity={1.5} color="#ffffff" />
+    <T.AmbientLight intensity={1.5} color="#ffffff"/>
 
-    <T.DirectionalLight position={[0, 50, 50]} intensity={20} color="#ffffff" />
+    <T.DirectionalLight position={[0, 50, 50]} intensity={20} color="#ffffff"/>
 
-    <T.PointLight position={[0, 0, 40]} intensity={500} color="#ffffff" distance={200} />
-    <T.AmbientLight position={[0, 0, 10]} intensity={70} color="#4169E1" distance={10} />
-    <T.AmbientLight position={[30, 20, 20]} intensity={10} color="#ff88cc" distance={100} />
-    <T.PointLight position={[-30, 20, 20]} intensity={400} color="#88ccff" distance={150} />
-    <T.PointLight position={[0, -20, 20]} intensity={300} color="#aa88ff" distance={150} />
-    <T.PointLight position={[0, 30, 10]} intensity={300} color="#ffee88" distance={150} />
+    <T.PointLight position={[0, 0, 40]} intensity={500} color="#ffffff" distance={200}/>
+    <T.AmbientLight position={[0, 0, 10]} intensity={70} color="#4169E1" distance={10}/>
+    <T.AmbientLight position={[30, 20, 20]} intensity={10} color="#ff88cc" distance={100}/>
+    <T.PointLight position={[-30, 20, 20]} intensity={400} color="#88ccff" distance={150}/>
+    <T.PointLight position={[0, -20, 20]} intensity={300} color="#aa88ff" distance={150}/>
+    <T.PointLight position={[0, 30, 10]} intensity={300} color="#ffee88" distance={150}/>
 
 
-
+    <Align auto x={0} y={0} z={false}>
         <T.Group
-            rotation.x={rotationX.current}
-            rotation.y={rotationY.current}
-            position.y={Math.sin(time) * 0.5}
-    >
-        {#if $crown}
-            <T.Group rotation.x={0} rotation.y={0.5} rotation.z={0.7}>
-                <T is={$crown.scene}
-                   position={[0, 2, 0]}
-                   rotation.y={rotation}
-                   scale={10}
-                   onpointerenter={() => { speed.target = 2 }}
+                rotation.x={rotationX.current}
+                rotation.y={rotationY.current}
+                position.y={Math.sin(time) * 0.5}
+        >
+            {#if $crown}
+                <T.Group rotation.x={0} rotation.y={0.5} rotation.z={0.7}>
+                    <T is={$crown.scene}
+                       position={[0, 2, 0]}
+                       rotation.y={rotation}
+                       scale={10}
+                       onpointerenter={() => { speed.target = 2 }}
+                       onpointerleave={() => { speed.target = 0.1 }}
+                    />
+                </T.Group>
+            {/if}
+
+            {#if $nom}
+                <Text
+                        position={[-60,9,0]}
+                        text={"\uF0A1"}
+                        scale={200}
+                        font="./fonts/secretFont.otf"
+                />
+                <Text
+                        position={[56.5,9,0]}
+                        text={"\uF0A1"}
+                        scale={200}
+                        font="./fonts/secretFont.otf"
+                />
+                <T is={$nom.scene}
+                   position={[0, 0, 0]}
+                   rotation.x={1.5}
+                   rotation.y={0}
+                   rotation.z={0}
+                   scale={60}
+                   onpointerenter={() => { speed.target = 5 }}
                    onpointerleave={() => { speed.target = 0.1 }}
                 />
-            </T.Group>
-        {/if}
-
-        {#if $nom}
-            <Text
-                    position={[-60,9,0]}
-                    text={"\uF0A1"}
-                    scale={200}
-                    font="./fonts/secretFont.otf"
-            />
-            <Text
-                    position={[56.5,9,0]}
-                    text={"\uF0A1"}
-                    scale={200}
-                    font="./fonts/secretFont.otf"
-            />
-            <T is={$nom.scene}
-               position={[0, 0, 0]}
-               rotation.x={1.5}
-               rotation.y={0}
-               rotation.z={0}
-               scale={60}
-               onpointerenter={() => { speed.target = 5 }}
-               onpointerleave={() => { speed.target = 0.1 }}
-            />
-        {/if}
+            {/if}
             <T.Mesh
                     position={[0, 0, -50]}
                     rotation.x={0.04}
@@ -126,7 +127,7 @@
                         emissiveIntensity={50}
                         toneMapped={false}
                 />
-                <T.RingGeometry args={[1, 1.015, 4]} />
+                <T.RingGeometry args={[1, 1.015, 4]}/>
             </T.Mesh>
             <Text
                     position={[-3.3,18,-20]}
@@ -135,6 +136,6 @@
                     font="./fonts/secretFont.otf"
             />
 
-    </T.Group>
-
+        </T.Group>
+    </Align>
 </Suspense>

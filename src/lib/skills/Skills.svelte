@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount, onDestroy } from 'svelte';
     import { Canvas } from '@threlte/core'
+    import { PerfMonitor } from '@threlte/extras'
     import bubblesData from "../../assets/bubblesData.json";
     import BubbleCard from "./BubbleCard.svelte";
     import BubbleModal from "./BubbleModal.svelte";
@@ -38,7 +39,7 @@
             x: RADIUS + Math.random() * (Width - 2 * RADIUS),
             y: RADIUS + Math.random() * (Height - 2 * RADIUS),
             angle: Math.random() * Math.PI * 2,
-            speed: 0.4 + Math.random() * 0.6,
+            speed: 1,
             wobbleOffset: Math.random() * Math.PI * 2,
             wobbleSpeed: 0.008 + Math.random() * 0.006,
             wobbleAmp: 0.3 + Math.random() * 0.4,
@@ -53,7 +54,7 @@
 
         for (const ball of balls) {
             ball.trail.unshift({ x: ball.x, y: ball.y });
-            if (ball.trail.length > 60) ball.trail.pop();
+            if (ball.trail.length > 250) ball.trail.pop();
 
             const wobble = Math.sin(t * ball.wobbleSpeed + ball.wobbleOffset) * ball.wobbleAmp * 0.02;
             ball.angle += wobble;
@@ -69,7 +70,7 @@
         ballTrails.set(balls.map(b => ({
             id: b.id,
             color: b.color,
-            position: { x: b.x, y: b.y }
+            trail: b.trail
         })));
 
         animFrame = requestAnimationFrame(tick);
