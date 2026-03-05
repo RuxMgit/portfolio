@@ -5,6 +5,7 @@
     import Projects from "./lib/projects/Projects.svelte";
     import HomePageButton from "./lib/HomePageButton.svelte";
     import Skills from "./lib/skills/Skills.svelte";
+    import HeroSection from "./lib/HeroSection.svelte";
 
     const Pages = {
         HOME : 0,
@@ -15,7 +16,10 @@
     let currentPage = $state(Pages.HOME)
 
     function changePageFromButtonClick(buttonPath : String){
-        if (buttonPath == "projects"){
+        if (buttonPath=="home"){
+            currentPage = Pages.HOME
+        }
+        else if (buttonPath == "projects"){
             currentPage = Pages.PROJECTS
         }
         else if (buttonPath=="skills"){
@@ -30,18 +34,17 @@
     {#if (currentPage === Pages.HOME)}
         <div class="canvas-container">
             <NameTitle/>
+            <HeroSection/>
         </div>
+    {:else}
+        <HomePageButton onButtonClick={changePageFromButtonClick}/>
+        {#if (currentPage===Pages.PROJECTS)}
+                <Projects/>
+            {:else if (currentPage===Pages.SKILLS)}
+                <Skills/>
+        {/if}
     {/if}
 
-    {#if (currentPage===Pages.PROJECTS)}
-        <Projects/>
-    {/if}
-
-    {#if (currentPage===Pages.SKILLS)}
-        <Skills/>
-    {/if}
-
-    <HomePageButton/>
 </main>
 
 <style>
@@ -59,12 +62,6 @@
         z-index: 100;
     }
 
-    :global(.home-page-button) {
-        position: fixed;
-        bottom: 2rem;
-        left: 2rem;
-        z-index: 100;
-    }
 
     .canvas-container {
         height: 100vh;
