@@ -11,6 +11,7 @@
 
 <style>
     .card-container{
+        padding-top: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;

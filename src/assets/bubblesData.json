@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "label": "Kotlin",
+        "color": "#FF6B6B",
+        "iconPath": "./icons/kotlin.svg",
+        "description": "Framework frontend réactif et performant. Svelte compile votre code en JavaScript vanille pour des applications ultra-rapides sans overhead de runtime."
+    },
+    {
+        "id": 2,
+        "label": "JavaScript/TypeScript",
+        "color": "#FFD93D",
+        "iconPath": "./icons/javascript.svg",
+        "description": "JavaScript typé pour des projets robustes et maintenables. Détection d'erreurs à la compilation, autocomplétion avancée et refactoring en toute sécurité."
+    },
+    {
+        "id": 3,
+        "label": "PHP",
+        "color": "#4d588e",
+        "iconPath": "./icons/php.svg",
+        "description": "Build tool nouvelle génération. Démarrage instantané, rechargement à chaud ultra-rapide et optimisation automatique pour la production."
+    },
+    {
+        "id": 4,
+        "label": "C#",
+        "color": "#C77DFF",
+        "iconPath": "./icons/csharp.svg",
+        "description": "Runtime JavaScript côté serveur. Écosystème npm gigantesque, performances élevées pour les applications temps réel et les APIs REST."
+    },
+    {
+        "id": 5,
+        "label": "Linux",
+        "color": "#4895EF",
+        "iconPath": "./icons/linux.svg",
+        "description": "Conteneurisation de vos applications pour un déploiement cohérent et reproductible, peu importe l'environnement cible."
+    },
+    {
+        "id": 6,
+        "label": "Python",
+        "color": "#ffd243",
+        "iconPath": "./icons/python.svg",
+        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+    },
+    {
+        "id": 7,
+        "label": "Go",
+        "color": "#4CC9F0",
+        "iconPath": "./icons/golang.svg",
+        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+    },
+    {
+        "id": 8,
+        "label": "Godot",
+        "color": "#488dbe",
+        "iconPath": "./icons/godot_engine.svg",
+        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+    },
+    {
+        "id": 9,
+        "label": "Git",
+        "color": "#de4c36",
+        "iconPath": "./icons/git.svg",
+        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+    },
+    {
+        "id": 10,
+        "label": "SQL",
+        "color": "white",
+        "iconPath": "./icons/database.svg",
+        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+    }
+]

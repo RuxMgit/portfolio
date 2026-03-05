@@ -4,10 +4,12 @@
     import TopBar from "./lib/TopBar.svelte";
     import Projects from "./lib/projects/Projects.svelte";
     import HomePageButton from "./lib/HomePageButton.svelte";
+    import Skills from "./lib/skills/Skills.svelte";
 
     const Pages = {
         HOME : 0,
-        PROJECTS : 1
+        PROJECTS : 1,
+        SKILLS : 2
     }
 
     let currentPage = $state(Pages.HOME)
@@ -15,6 +17,9 @@
     function changePageFromButtonClick(buttonPath : String){
         if (buttonPath == "projects"){
             currentPage = Pages.PROJECTS
+        }
+        else if (buttonPath=="skills"){
+            currentPage = Pages.SKILLS
         }
     }
 </script>
@@ -30,6 +35,10 @@
 
     {#if (currentPage===Pages.PROJECTS)}
         <Projects/>
+    {/if}
+
+    {#if (currentPage===Pages.SKILLS)}
+        <Skills/>
     {/if}
 
     <HomePageButton/>
@@ -62,4 +71,5 @@
         width: 100vw;
         padding-top: 60px;
     }
+
 </style>

@@ -33,7 +33,7 @@
 <div class="topbar">
     <nav class="navBar">
         <div class="nav-item">
-            <GlitchButton buttonText="Compétences" onClick={handleButtonClick} buttonPath="competences"/>
+            <GlitchButton buttonText="Compétences" onClick={handleButtonClick} buttonPath="skills"/>
         </div>
 
         <div class="nav-separator"></div>
