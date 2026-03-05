@@ -18,7 +18,7 @@
     {/each}
     <Text
             position={[0,0,0]}
-            text={"Compétences"}
+            text={"Mes Compétences"}
             scale={20}
             font="./fonts/secretFont_aalt.otf"
     />

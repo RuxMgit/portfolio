@@ -84,16 +84,18 @@
     onDestroy(() => {
         cancelAnimationFrame(animFrame);
     });
-
+    let timerId =0
+    // TODO : Ajouter la barre de progression
     function handleMouseOverBall(ball:Ball){
+        clearTimeout(timerId)
         ball.speed = ball.speed/100
-        setTimeout(()=>{
+        timerId = setTimeout(()=>{
             selectedBubble = ball;
         }, 1000)
     }
     function handleMouseOutBall(ball:Ball){
-        selectedBubble = null;
         ball.speed = ball.speed*100
+        clearTimeout(timerId)
     }
 </script>
 <div class="canvas-container">
