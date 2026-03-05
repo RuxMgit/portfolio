@@ -10,16 +10,21 @@
     interface Props {
         data: BubbleData;
         radius?: number;
-        onclick: () => void;
+        onmouseover: () => void;
+        onmouseout : () => void;
     }
 
-    let { data, radius = 44, onclick }: Props = $props();
-</script>
+    let { data, radius = 44, onmouseover, onmouseout }: Props = $props();
 
+
+
+</script>
+<!-- svelte-ignore a11y_mouse_events_have_key_events -->
 <button
         class="ball"
         style="--color: {data.color}; width: {radius * 2}px; height: {radius * 2}px;"
-        {onclick}
+        {onmouseover}
+        {onmouseout}
 >
     <img
             class="ball-icon"

@@ -6,10 +6,10 @@
     const CELL_SIZE = 1.5
     const GAP = 0.15
     const STEP = CELL_SIZE + GAP
-    const COLS = Math.ceil(window.innerWidth / 50 / STEP) + 2
+    const COLUMNS = Math.ceil(window.innerWidth / 50 / STEP) + 2
     const ROWS = Math.ceil(window.innerHeight / 50 / STEP) + 2
 
-    const offsetX = -((COLS - 1) * STEP) / 2
+    const offsetX = -((COLUMNS - 1) * STEP) / 2
     const offsetY = -((ROWS - 1) * STEP) / 2
 
     interface Cell {
@@ -24,7 +24,7 @@
 
     const cells: Cell[] = []
     for (let row = 0; row < ROWS; row++) {
-        for (let col = 0; col < COLS; col++) {
+        for (let col = 0; col < COLUMNS; col++) {
             const x = offsetX + col * STEP
             const y = offsetY + row * STEP
             cells.push({
@@ -52,7 +52,7 @@
             const [wx, wy] = screenToWorld(head.x, head.y)
             const col = Math.round((wx - offsetX) / STEP)
             const row = Math.round((wy - offsetY) / STEP)
-            const cell = cells[row * COLS + col]
+            const cell = cells[row * COLUMNS + col]
             if (cell) {
                 cell.heat = 1
                 cell.mat.color.set(ball.color)
@@ -61,7 +61,7 @@
 
         for (const cell of cells) {
             if (cell.heat > 0) {
-                cell.heat = Math.max(0, cell.heat - delta * 1.5) // vitesse de fade
+                cell.heat = Math.max(0, cell.heat - delta * 0.05)
                 cell.mat.opacity = cell.heat * 0.6
             }
         }

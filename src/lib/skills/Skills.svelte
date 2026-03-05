@@ -84,6 +84,17 @@
     onDestroy(() => {
         cancelAnimationFrame(animFrame);
     });
+
+    function handleMouseOverBall(ball:Ball){
+        ball.speed = ball.speed/100
+        setTimeout(()=>{
+            selectedBubble = ball;
+        }, 1000)
+    }
+    function handleMouseOutBall(ball:Ball){
+        selectedBubble = null;
+        ball.speed = ball.speed*100
+    }
 </script>
 <div class="canvas-container">
     <Canvas renderProps={{ alpha: true }}>
@@ -104,7 +115,8 @@
             <BubbleCard
                     data={ball}
                     radius={RADIUS}
-                    onclick={() => selectedBubble = ball}
+                    onmouseover={() =>handleMouseOverBall(ball)}
+                    onmouseout={()=>handleMouseOutBall(ball)}
             />
         </div>
     {/each}
