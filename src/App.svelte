@@ -1,11 +1,11 @@
 <script lang="ts">
     import {locale, locales, isLoading} from 'svelte-i18n'
-    import NameTitle from "./lib/title/NameTitle.svelte";
+    import HeroCanvas from "./lib/hero/HeroCanvas.svelte";
     import TopBar from "./lib/TopBar.svelte";
     import Projects from "./lib/projects/Projects.svelte";
     import HomePageButton from "./lib/HomePageButton.svelte";
     import Skills from "./lib/skills/Skills.svelte";
-    import HeroSection from "./lib/HeroSection.svelte";
+    import AboutSection from "./lib/about/AboutSection.svelte";
 
     const Pages = {
         HOME : 0,
@@ -33,8 +33,8 @@
 
     {#if (currentPage === Pages.HOME)}
         <div class="canvas-container">
-            <NameTitle/>
-            <HeroSection/>
+            <HeroCanvas/>
+            <AboutSection/>
         </div>
     {:else}
         <HomePageButton onButtonClick={changePageFromButtonClick}/>
