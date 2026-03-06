@@ -2,15 +2,13 @@
     import musicBoxData from "../../assets/musicBoxData.json";
     import StarButton from "./StarButton.svelte";
     import chroma from 'chroma-js';
-
-    console.log(musicBoxData)
-    let selectedSong = $state(9)
-    function next(){
-        if (selectedSong==musicBoxData.length){
-            selectedSong=0
-        }else {
-            selectedSong++
-        }
+    import MusicCard from "./MusicCard.svelte";
+    import CvCard from "./CvCard.svelte";
+    console.log(musicBoxData.length)
+    let selectedSong = $state(0)
+    function changeSong(direction: number){
+        console.log(selectedSong)
+        selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
     }
 
     let colors = $derived(() => {
@@ -24,24 +22,26 @@
     });
 </script>
 
-<div class="about-container">
-    <div class="profile-card" style="
-        --border:      {colors().border};
-        --glow:        {colors().glow};
-        --title:       {colors().title};
-        --artist:      {colors().artist};
-        border-color:  {colors().border};
-    ">
-        <img src={musicBoxData[selectedSong].coverArt} alt="cover art" class="cover-art">
-        <div class="artist">{musicBoxData[selectedSong].artist}</div>
-        <div class="music-title" style="color: {musicBoxData[selectedSong].color}">{musicBoxData[selectedSong].title}</div>
-        <div class="play-buttons">
-            <StarButton text={"\u2190"} color={musicBoxData[selectedSong].color}/>
-            <StarButton text={"\u2192"} color={musicBoxData[selectedSong].color}/>
+<div class="about-container"  style="
+            --border:      {colors().border};
+            --glow:        {colors().glow};
+            --title:       {colors().title};
+            --artist:      {colors().artist};
+        ">
+    <div class="grid">
+        <div class="cell"><p>Image cool</p></div>
+        <div class="cell"><p>Experience</p></div>
+        <div class="cell cv-square ">
+            <CvCard />
         </div>
-    </div>
-    <div>
-
+        <div class="cell "><p>Développeur Fullstack</p></div>
+        <div class="cell span-col-2"><p>Projets</p></div>
+        <div class="cell"><p>Langues</p></div>
+        <div class="cell span-row-2 music-card">
+            <MusicCard song={musicBoxData[selectedSong]} colors={colors()} onPrev={() => changeSong(-1)} onNext={() => changeSong(1)} />
+        </div>
+        <div class="cell"><p>Jeux vidéos</p></div>
+        <div class="cell span-col-2"><p>Compétences</p></div>
     </div>
 </div>
 
@@ -59,58 +59,25 @@
         align-items: center;
     }
 
-    .profile-card {
-        font-family: coolFont, serif;
-        color: black;
+    .grid {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+        padding: 8px;
+    }
+
+    .cell {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        width: 22rem;
-        height: 35rem;
-        border-radius: 3rem;
-        background: #0d0d0d;
-        position: relative;
-        overflow: hidden;
-        gap: 0.75rem;
-        padding :2rem;
+        justify-content: center;
+        background-color: #0d0d0d;
         border: 2px solid var(--border);
+        border-radius: 3rem;
+        overflow: hidden;
     }
-
-    .cover-art {
-        position: relative;
-        width: 100%;
-        border-radius: 1rem;
-        aspect-ratio : 1 / 1
-    }
-
-    .artist {
-        position: relative;
-        z-index: 1;
-        font-size: 1.8rem;
-        color: var(--artist);
-        letter-spacing: 0.03em;
-        text-align: center;
-    }
-
-    .music-title {
-        position: relative;
-        z-index: 1;
-        max-width: 20rem;
-        font-size: 3rem;
-        line-height: 1;
-        text-align: center;
-        word-break: break-word;
-        hyphens: auto;
-        color: var(--title);
-    }
-
-    .play-buttons {
-        position: absolute;
-        bottom: 2rem;
-        left: 0.5rem;
-        right: 0.5rem;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-    }
+    .span-col-2 { grid-column: span 2; }
+    .span-row-2 { grid-row: span 2; }
 </style>

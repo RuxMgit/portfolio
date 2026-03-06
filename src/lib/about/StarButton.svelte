@@ -1,8 +1,8 @@
 <script lang="ts">
-    let {text, color} = $props()
+    let {text, color, onclick} = $props()
 </script>
 
-<button style="--button_color:{color}">
+<button style="--button_color:{color}" onclick={onclick}>
     {text}
     <div class="star-1">
         <svg
@@ -213,8 +213,8 @@
     button:hover .star-1 {
         position: absolute;
         opacity: 1;
-        top: -80%;
-        left: -30%;
+        top: -40%;
+        left: 0%;
         width: 25px;
         height: auto;
         z-index: 2;
@@ -223,8 +223,8 @@
     button:hover .star-2 {
         position: absolute;
         opacity: 1;
-        top: -25%;
-        left: 10%;
+        top: -10%;
+        left: 20%;
         width: 15px;
         height: auto;
         z-index: 2;
@@ -233,8 +233,8 @@
     button:hover .star-3 {
         position: absolute;
         opacity: 1;
-        top: 55%;
-        left: 25%;
+        top: 60%;
+        left: 30%;
         width: 5px;
         height: auto;
         z-index: 2;
@@ -244,7 +244,7 @@
         position: absolute;
         opacity: 1;
         top: 30%;
-        left: 80%;
+        left: 70%;
         width: 8px;
         height: auto;
         z-index: 2;
@@ -254,7 +254,7 @@
         position: absolute;
         opacity: 1;
         top: 25%;
-        left: 115%;
+        left: 90%;
         width: 15px;
         height: auto;
         z-index: 2;
@@ -263,8 +263,8 @@
     button:hover .star-6 {
         position: absolute;
         opacity: 1;
-        top: 5%;
-        left: 60%;
+        top: -10%;
+        left: 55%;
         width: 5px;
         height: auto;
         z-index: 2;

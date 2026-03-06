@@ -1,48 +1,35 @@
 [
     {
-        "id": 0,
-        "title": "Time Moves Slow",
-        "artist": "BADBADNOTGOOD, Colin Stetson",
-        "color": "#8fdffa",
-        "coverArt": "./coverArts/timemovesslow.jpg"
-    },
-    {
-        "id": 1,
         "title": "cXz",
         "artist": "Deftones",
         "color": "#1db450",
         "coverArt": "./coverArts/cxz.jpg"
     },
     {
-        "id": 2,
         "title": "HAZARD DUTY PAY!",
         "artist": "JPEGMAFIA",
         "color": "#fa5b29",
         "coverArt": "./coverArts/hazard.jpg"
     },
     {
-        "id": 3,
         "title": "M.T.B.T.T.F.",
         "artist": "Clipse",
         "color": "#d49eb3",
         "coverArt": "./coverArts/clipse.jpg"
     },
     {
-        "id": 4,
         "title": "Dancing with your eyes closed",
         "artist": "Jane Remover",
         "color": "#da7320",
         "coverArt": "./coverArts/revengeseekerz.jpg"
     },
     {
-        "id": 5,
         "title": "Mar-a-Lago",
         "artist": "Freddie Gibbs, The Alchemist",
         "color": "#d86ab5",
         "coverArt": "./coverArts/alfredo.jpg"
     },
     {
-        "id": 6,
         "title": "Ghost Hardware",
         "artist": "Burial",
         "color": "#8b8b8b",
@@ -50,24 +37,33 @@
         "colorOverride": "grey"
     },
     {
-        "id": 7,
-        "title": "Mamas PrimeTime",
-        "artist": "Westside Gunn, JID, Conway the Machine",
-        "color": "#8b8b8b",
-        "coverArt": "./coverArts/mamas.jpg"
-    },
-    {
-        "id": 8,
         "title": "Hell For It",
         "artist": "Danny Brown",
         "color": "#ef03ec",
         "coverArt": "./coverArts/danny.jpg"
     },
     {
-        "id": 9,
         "title": "Dogs",
         "artist": "Pink Floyd",
         "color": "#d39147",
         "coverArt": "./coverArts/dogs.jpg"
+    },
+    {
+        "title": "Mamas PrimeTime",
+        "artist": "Westside Gunn, JID, Conway the Machine",
+        "color": "#7d210e",
+        "coverArt": "./coverArts/mamas.jpg"
+    },
+    {
+        "title": "Tidal Wave (Live From Malibu)",
+        "artist": "Yussef Dayes",
+        "color": "#d2c2f2",
+        "coverArt": "./coverArts/malibu.jpg"
+    },
+    {
+        "title": "L$D",
+        "artist": "A$AP Rocky",
+        "color": "#e7e7e7",
+        "coverArt": "./coverArts/lsd.jpg"
     }
 ]

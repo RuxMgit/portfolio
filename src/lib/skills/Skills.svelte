@@ -39,7 +39,7 @@
             x: RADIUS + Math.random() * (Width - 2 * RADIUS),
             y: RADIUS + Math.random() * (Height - 2 * RADIUS),
             angle: Math.random() * Math.PI * 2,
-            speed: 1,
+            speed: 2,
             wobbleOffset: Math.random() * Math.PI * 2,
             wobbleSpeed: 0.008 + Math.random() * 0.006,
             wobbleAmp: 0.3 + Math.random() * 0.4,
@@ -100,6 +100,7 @@
 </script>
 <div class="canvas-container">
     <Canvas renderProps={{ alpha: true }}>
+<!--        <PerfMonitor/>-->
         <Effects />
     </Canvas>
 </div>
