@@ -1,18 +1,22 @@
 <script lang="ts">
-    import StarButton from "./StarButton.svelte";
+    import StarButton from "../utils/StarButton.svelte";
+    import { fade, scale } from 'svelte/transition'
     let { song, colors, onPrev, onNext } = $props();
 </script>
 
-<div class="music-card" style="border-color: {colors.border}">
-    <img src={song.coverArt} alt="cover art" class="cover-art">
-    <div class="artist" style="color: {colors.artist}">{song.artist}</div>
-    <div class="music-title" style="color: {colors.title}">{song.title}</div>
-    <div class="play-buttons">
-        <StarButton text="←" color={song.color} onclick={onPrev}/>
-        <StarButton text="→" color={song.color} onclick={onNext}/>
+{#key song.id}
+    <div class="music-card"
+         style="border-color: {colors.border}"
+         in:fade={{ duration: 300 }}>
+        <img src={song.coverArt} alt="cover art" class="cover-art">
+        <div class="artist" style="color: {colors.artist}">{song.artist}</div>
+        <div class="music-title" style="color: {colors.title}">{song.title}</div>
+        <div class="play-buttons">
+            <StarButton text="←" color={song.color} onclick={onPrev}/>
+            <StarButton text="→" color={song.color} onclick={onNext}/>
+        </div>
     </div>
-</div>
-
+{/key}
 <style>
     @font-face { font-family: coolFont; src: url("/fonts/secretFont_aalt.otf"); }
 

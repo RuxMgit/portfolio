@@ -1,0 +1,42 @@
+[
+    {
+        "text": "function showMySkills() {",
+        "pause": 500
+    },
+    {
+        "text": "   const skills = [",
+        "pause": 300
+    },
+    {
+        "text": "   \"I beat Dark Souls 3 in 8 days\",",
+        "pause": 200
+    },
+    {
+        "text": "   \"I made this portfolio in a framework I never used before\",",
+        "pause": 200
+    },
+    {
+        "text": "   \"I just defeated Sekiro's final boss!\"",
+        "pause": 200
+    },
+    {
+        "text": "   \"I learned C# in 3 days.\"",
+        "pause": 200
+    },
+    {
+        "text": "   \"I have a copy of a Yussef Dayes vinyl limited to 500 pressings\"",
+        "pause": 200
+    },
+    {
+        "text": "]",
+        "pause": 300
+    },
+    {
+        "text": "return skills",
+        "pause": 100
+    },
+    {
+        "text": "}",
+        "pause": 1000
+    }
+]

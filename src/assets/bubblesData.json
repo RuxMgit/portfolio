@@ -4,69 +4,76 @@
         "label": "Kotlin",
         "color": "#FF6B6B",
         "iconPath": "./icons/kotlin.svg",
-        "description": "Framework frontend réactif et performant. Svelte compile votre code en JavaScript vanille pour des applications ultra-rapides sans overhead de runtime."
+        "description": "Langage polyvalent intercompatible avec Java. J'ai beaucoup pratiqué le Kotlin avec diverses technologies comme JavaFX, Ktor, Jetpack Compose et Android, que ce soie lors de mes études ou même en entreprise."
     },
     {
         "id": 2,
         "label": "JavaScript/TypeScript",
         "color": "#FFD93D",
         "iconPath": "./icons/javascript.svg",
-        "description": "JavaScript typé pour des projets robustes et maintenables. Détection d'erreurs à la compilation, autocomplétion avancée et refactoring en toute sécurité."
+        "description": "Langage principalement orienté web, je l'ai utilisé pendant mon cursus pour créer des APIs et manipuler du front-end. Je maitrise Svelte, Three.js, GraphQL, node.JS, Vite et React"
     },
     {
         "id": 3,
         "label": "PHP",
         "color": "#4d588e",
         "iconPath": "./icons/php.svg",
-        "description": "Build tool nouvelle génération. Démarrage instantané, rechargement à chaud ultra-rapide et optimisation automatique pour la production."
+        "description": "Langage de script généraliste conçu pour le web. Je maitrise les frameworks CodeIgniter et Symfony que j'ai employé durant un projet a l'IUT."
     },
     {
         "id": 4,
         "label": "C#",
         "color": "#C77DFF",
         "iconPath": "./icons/csharp.svg",
-        "description": "Runtime JavaScript côté serveur. Écosystème npm gigantesque, performances élevées pour les applications temps réel et les APIs REST."
+        "description": "Langage modernisant le C++. J'ai travaillé avec .NET et Blazor afin de construire une application web."
     },
     {
         "id": 5,
         "label": "Linux",
         "color": "#4895EF",
         "iconPath": "./icons/linux.svg",
-        "description": "Conteneurisation de vos applications pour un déploiement cohérent et reproductible, peu importe l'environnement cible."
+        "description": "Système d'exploitation open-source et beaucoup utilisé sur les serveurs. Je suis très familier avec plusierus distributions dont Debian, Fedora et Arch."
     },
     {
         "id": 6,
         "label": "Python",
         "color": "#ffd243",
         "iconPath": "./icons/python.svg",
-        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+        "description": "Langage interprété multiplateforme et polyvalent. J'ai grandement utilisé les librairies de traitement de données comme pandas, matplotlib, et scikit-learn. Je travaille beaucoup avec sur le framework Odoo pour mon travail en entreprise."
     },
     {
         "id": 7,
         "label": "Go",
         "color": "#4CC9F0",
         "iconPath": "./icons/golang.svg",
-        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+        "description": "Go est un langage compilé et concurrent, que j'ai utilisé pour apprendre la programmation lors de mes études. Je suis surtout familier avec le moteur Ebiten que j'ai utilisé pour créer plusieurs applications."
     },
     {
         "id": 8,
         "label": "Godot",
         "color": "#488dbe",
         "iconPath": "./icons/godot_engine.svg",
-        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+        "description": "Moteur de jeu open-source et léger permettant de créer des jeux-vidéos en 2d et 3d. Je travaille actuellement sur plusieurs projets utilisant ce moteur, l'un est disponible sur mon Github."
     },
     {
         "id": 9,
         "label": "Git",
         "color": "#de4c36",
         "iconPath": "./icons/git.svg",
-        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+        "description": "Système de version de contrôle décentralisé libre et gratuit. Je suis particulièrement à l'aise avec les Git Flow et les différents outils venant avec Github et Gitlab."
     },
     {
         "id": 10,
         "label": "SQL",
         "color": "white",
         "iconPath": "./icons/database.svg",
-        "description": "Outil de design collaboratif en temps réel. Prototypage, design system, handoff développeur — tout en un seul endroit."
+        "description": "SQL est le langage le plus utilisé pour gérer des bases de données. Je suis à l'aise avec de multiples moteurs comme PostGRE, MariaDB, MySQL et Microsoft SQL Server. Je sais également exploiter MongoDB et donc le NoSQL."
+    },
+    {
+        "id": 11,
+        "label": "Mercurial",
+        "color": "grey",
+        "iconPath": "./icons/hg.svg",
+        "description": "Logiciel de versionnage décentralisé efficace, prédatant Git. Je l'utilise en entreprise pour gérer le versionnage des modules Odoo."
     }
 ]

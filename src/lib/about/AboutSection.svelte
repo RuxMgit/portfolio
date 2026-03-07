@@ -1,9 +1,12 @@
 <script lang="ts">
     import musicBoxData from "../../assets/musicBoxData.json";
-    import StarButton from "./StarButton.svelte";
+    import StarButton from "../utils/StarButton.svelte";
     import chroma from 'chroma-js';
     import MusicCard from "./MusicCard.svelte";
     import CvCard from "./CvCard.svelte";
+    import SquareSelector from "./SquareSelector.svelte";
+    import SlideButton from "../utils/SlideButton.svelte";
+    import ProjectsCell from "./ProjectsCell.svelte";
     console.log(musicBoxData.length)
     let selectedSong = $state(0)
     function changeSong(direction: number){
@@ -20,6 +23,8 @@
             artist:     chroma(base).brighten(2).desaturate(1).hex(),
         };
     });
+
+
 </script>
 
 <div class="about-container"  style="
@@ -34,14 +39,18 @@
         <div class="cell cv-square ">
             <CvCard />
         </div>
-        <div class="cell "><p>Développeur Fullstack</p></div>
-        <div class="cell span-col-2"><p>Projets</p></div>
+        <div class="cell "><p>Développeur Fullstack + Github Gitlab</p></div>
+        <div class="cell span-col-2">
+            <ProjectsCell buttonText="Mes projets" image="./projects.png"/>
+        </div>
         <div class="cell"><p>Langues</p></div>
         <div class="cell span-row-2 music-card">
             <MusicCard song={musicBoxData[selectedSong]} colors={colors()} onPrev={() => changeSong(-1)} onNext={() => changeSong(1)} />
         </div>
-        <div class="cell"><p>Jeux vidéos</p></div>
-        <div class="cell span-col-2"><p>Compétences</p></div>
+        <div class="cell"><SquareSelector/></div>
+        <div class="cell span-col-2">
+            <ProjectsCell buttonText="Mes compétences techniques"/>
+        </div>
     </div>
 </div>
 
@@ -53,7 +62,7 @@
 
     .about-container {
         height: 100vh;
-        padding :10rem;
+        padding :5rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -77,6 +86,7 @@
         border: 2px solid var(--border);
         border-radius: 3rem;
         overflow: hidden;
+        transition: border-color 0.4s ease;
     }
     .span-col-2 { grid-column: span 2; }
     .span-row-2 { grid-row: span 2; }

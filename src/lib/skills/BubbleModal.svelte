@@ -1,3 +1,19 @@
+<dialog
+        style="border-color: {bubble.color};"
+        bind:this={dialog}
+        onclose={onclose}
+        onclick={(e) => { if (e.target === dialog) onclose() }}
+>
+
+    <img src={bubble.iconPath} alt="icon" class="modalIcon">
+    <p></p>
+    <p>
+        {@html bubble.description}
+    </p>
+
+</dialog>
+
+<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 <script lang="ts">
     import type { BubbleData } from './BubbleCard.svelte';
 
@@ -14,27 +30,12 @@
     });
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
-<dialog
-        style="border-color: {bubble.color};"
-        bind:this={dialog}
-        onclose={onclose}
-        onclick={(e) => { if (e.target === dialog) onclose() }}
->
-
-    <img src={bubble.iconPath} alt="icon" class="modalIcon">
-    <p/>
-    {bubble.description}
-
-</dialog>
-
 <style>
     dialog {
         display: flex;
         flex-direction: column;
         max-width: 50%;
         border-radius: 25px;
-        padding: 0;
         align-items: center;
         padding: 2rem;
     }

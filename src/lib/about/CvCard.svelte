@@ -4,34 +4,43 @@
 
 <div class="cv-square">
     <img class="cv-image" {src} alt="CV"/>
-    <div class="dark-filter">CV</div>
+    <div class="black-filter">Découvrez mon CV</div>
 </div>
 
 <style>
-    @font-face { font-family: coolFont; src: url("/fonts/secretFont_aalt.otf"); }
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
     .cv-square {
         position: relative;
         overflow: hidden;
         width: 100%;
         height: 100%;
+        transform: scale(1);
     }
+
+    .cv-square:hover .cv-image{
+        transform: scale(1.2);
+    }
+
     .cv-image {
         width: 100%;
         height: 150%;
         object-fit: cover;
+        transition: transform 0.5s ease;
     }
-    .dark-filter {
-        background-color: black;
-        opacity: 0.6;
+
+    .black-filter {
+        background-color: rgba(0, 0, 0, 1);
         position: absolute;
+        opacity: 0.6;
         top: 0; left: 0;
         height: 100%; width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: coolFont, serif;
-        font-size: 4rem;
+        text-align: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 3rem;
         color: white;
     }
 </style>

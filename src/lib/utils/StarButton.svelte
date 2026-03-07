@@ -263,9 +263,9 @@
     button:hover .star-6 {
         position: absolute;
         opacity: 1;
-        top: -10%;
+        top: 20%;
         left: 55%;
-        width: 5px;
+        width: 10px;
         height: auto;
         z-index: 2;
     }

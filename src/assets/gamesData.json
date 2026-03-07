@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Hitman",
+        "image": "./games/hitman.avif"
+    },
+    {
+        "title": "Elden Ring",
+        "image": "./games/elden-ring.png"
+    },
+    {
+        "title": "Dark Souls",
+        "image": "./games/darksouls.jpg"
+    },
+    {
+        "title": "Half Life",
+        "image": "./games/half-life.jpg"
+    },
+    {
+        "title": "Sekiro",
+        "image": "./games/sekiro.jpg"
+    },
+    {
+        "title": "Celeste",
+        "image": "./games/celeste.webp"
+    },
+    {
+        "title": "Balatro",
+        "image": "./games/balatro.jpeg"
+    },
+    {
+        "title": "Skyrim",
+        "image": "./games/skyrim.webp"
+    },
+    {
+        "title": "Dishonored",
+        "image": "./games/dishonored.jpeg"
+    },
+    {
+        "title": "Hades",
+        "image": "./games/hades.webp"
+    },
+    {
+        "title": "Sifu",
+        "image": "./games/sifu.jpeg"
+    },
+    {
+        "title": "Portal",
+        "image": "./games/portal.avif"
+    }
+]

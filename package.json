@@ -27,7 +27,12 @@
     "@types/three": "^0.183.0",
     "@xyflow/svelte": "^1.5.1",
     "chroma-js": "^3.2.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-svelte": "^8.6.0",
     "svelte-i18n": "^4.0.1",
-    "three": "^0.183.0"
+    "svelte-light-carousel": "^2.0.1",
+    "svelte-typed-js": "^1.0.3",
+    "three": "^0.183.0",
+    "typed.js": "^3.0.0"
   }
 }
