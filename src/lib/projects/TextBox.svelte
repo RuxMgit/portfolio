@@ -1,4 +1,5 @@
 <script lang="ts">
+
     export let title: string = "";
     export let slogan: string = "";
     export let color: string = "#000";
@@ -6,8 +7,29 @@
 
 </script>
 
+<div class="text-box" style="--c: {color}; --bg: {bgColor}">
+    <div class="top">
+        {#if title}
+            <h2>{title}</h2>
+        {:else}
+            <div class="bar bar-title"></div>
+            <div class="bar bar-title2"></div>
+        {/if}
+    </div>
+    <div class="bottom">
+        {#if slogan}
+            <p>{slogan}</p>
+        {:else}
+            <div class="bar bar-sub"></div>
+            <div class="bar bar-sub2"></div>
+            <div class="bar bar-sub3"></div>
+        {/if}
+    </div>
+</div>
+
 <style>
     .text-box {
+        position: relative;
         flex: 0 0 50%;
         height: 100%;
         display: flex;
@@ -71,23 +93,3 @@
     .bar-sub2   { height: 7px;  width: 75%; opacity: 0.2; }
     .bar-sub3   { height: 7px;  width: 55%; opacity: 0.15; }
 </style>
-
-<div class="text-box" style="--c: {color}; --bg: {bgColor}">
-    <div class="top">
-        {#if title}
-            <h2>{title}</h2>
-        {:else}
-            <div class="bar bar-title"></div>
-            <div class="bar bar-title2"></div>
-        {/if}
-    </div>
-    <div class="bottom">
-        {#if slogan}
-            <p>{slogan}</p>
-        {:else}
-            <div class="bar bar-sub"></div>
-            <div class="bar bar-sub2"></div>
-            <div class="bar bar-sub3"></div>
-        {/if}
-    </div>
-</div>

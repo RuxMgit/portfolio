@@ -5,5 +5,6 @@
   ],
   "slogan" : "Plus besoin de compter les points au Flip7 avec Jetpack Compose!",
   "color" : "#e84f64",
-  "bgColor" : "#fff6d9"
+  "bgColor" : "#fff6d9",
+  "description" : "Exemple"
 }

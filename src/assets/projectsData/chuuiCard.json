@@ -1,9 +1,9 @@
 {
-    "title" : "Chuui (注意)",
+    "title": "Chuui (注意)",
     "imagePaths": [
         "./images/chuuiImage.png"
     ],
-    "slogan" : "L'attention est un jeu et on peut le gagner. Application Android de gestion des traitements liés au TDAH avec un web scraper et une API",
-    "color" : "#DB5E31",
-    "bgColor" : "#fff0bc"
-}
+    "slogan": "L'attention est un jeu et on peut le gagner. Application Android de gestion des traitements liés au TDAH avec un web scraper et une API",
+    "color": "#DB5E31",
+    "bgColor": "#fff0bc",
+    "description": "Chuui est une application Android de suivi des traitements liés au TDAH, elle est codée en Kotlin. Elle a été développée dans le contexte du projet du semestre 5 de mon BUT. En équipe de 6, nous étions chargés de créer une application médicale, avec une API et une fonctionalité d'OCR. Le projet devait être effectué en respectant la méthode SCRUM et en établissant une infrastructure DevOps permettant un déploiement sans interruption. Nous devions présenter ce projet au défi santé de la Station S de Nantes, vous pouvez retrouver une vidéo de ma présentation de l'application ici : <a href=\"https://www.linkedin.com/posts/iut-de-nantes_santaeznumaezrique-informatique-tech-activity-7425488767257411587-zFTy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE2uXFkByG6Ib3Sa0P6azmI3rhnVqyS2toY\" target=\"_blank\" style=\"display:inline-block;padding:0.4rem 1rem;border-radius:0.5rem;background:#orange;color:#fff;text-decoration:none;font-weight:600;\">Vidéo de présentation</a>"}

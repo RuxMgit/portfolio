@@ -5,5 +5,6 @@
   ],
   "slogan" : "Le Skyjo, en ligne avec JavaFX, de 2 à 8 joueur et avec la possibilité de jouer avec des robots!",
   "color" : "#f4f4f4",
-  "bgColor" : "#cc75db"
+  "bgColor" : "#cc75db",
+  "description" : "Skyjérôme est le dernier projet livré de ma première année de BUT, en équipe de 4, nous étions chargés de recréer le jeu de société Skyjo en utilisant JavaFX et un serveur mis a disposition par l'IUT. Notre projet proposais une vue responsive pouvant afficher jusqu'à 8 joueurs, des animations sur les cartes, et des robots basés sur des arbres de décision, ce que nous étions les seuls a avoir implémentés."
 }

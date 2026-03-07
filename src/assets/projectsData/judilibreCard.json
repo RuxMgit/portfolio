@@ -5,5 +5,6 @@
     ],
     "slogan" : "API de récupération des décisions juridiques en 3 micro-services avec JavaScript et MongoDB",
     "color" : "#94A187",
-    "bgColor" : "#29524A"
+    "bgColor" : "#29524A",
+    "description" : "Exemple"
 }

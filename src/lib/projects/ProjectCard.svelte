@@ -2,20 +2,27 @@
     import ImageBox from "./ImageBox.svelte";
     import TextBox from "./TextBox.svelte";
     import { onMount } from "svelte";
+    import DescriptionBox from "./DescriptionBox.svelte";
 
-    export interface CardData {
+    interface CardData {
         title: string;
         imagePaths: string[];
         slogan: string;
         color: string;
         bgColor: string;
+        description: string;
     }
 
-    export let direction: string;
-    export let data: CardData;
+    interface Props {
+        direction: string;
+        data: CardData;
+    }
 
-    let cardEl: HTMLDivElement;
-    let visible = false;
+    let { direction, data }: Props = $props();
+
+    let cardEl: HTMLDivElement = $state()!;
+    let visible = $state(false);
+    let descriptionOpen = $state(false);
 
     onMount(() => {
         const observer = new IntersectionObserver(
@@ -26,6 +33,28 @@
         return () => observer.disconnect();
     });
 </script>
+
+{#if direction === 'leftToRight'}
+    <div class="card" class:visible bind:this={cardEl}>
+        <button class="info-btn right" onclick={() => descriptionOpen = !descriptionOpen} aria-label="Informations">+ Infos</button>
+        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
+        {#if descriptionOpen}
+            <DescriptionBox text={data.description} color={data.color} bgColor={data.bgColor}/>
+        {:else}
+            <ImageBox imagePaths={data.imagePaths} color={data.color} />
+        {/if}
+    </div>
+{:else}
+    <div class="card" class:visible bind:this={cardEl}>
+        <button class="info-btn left" onclick={() => descriptionOpen = !descriptionOpen} aria-label="Informations">+ Infos</button>
+        {#if descriptionOpen}
+            <DescriptionBox text={data.description} color={data.color} bgColor={data.bgColor}/>
+        {:else}
+            <ImageBox imagePaths={data.imagePaths} color={data.color} />
+        {/if}
+        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
+    </div>
+{/if}
 
 <style>
     .card {
@@ -61,16 +90,33 @@
     .card.visible:hover {
         opacity: 1;
     }
+
+    .info-btn {
+        position: absolute;
+        background: black;
+        color: var(--c);
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s ease;
+        z-index: 3;
+    }
+
+    .info-btn.right{
+        bottom: 0.7rem;
+        right: 0.3rem;
+    }
+    .info-btn.left{
+        bottom: 0.7rem;
+        left: 0.3rem;
+    }
+
+    .info-btn:hover {
+        opacity: 1;
+    }
 </style>
 
-{#if direction === 'leftToRight'}
-    <div class="card" class:visible bind:this={cardEl}>
-        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
-        <ImageBox imagePaths={data.imagePaths} color={data.color} />
-    </div>
-{:else}
-    <div class="card" class:visible bind:this={cardEl}>
-        <ImageBox imagePaths={data.imagePaths} color={data.color} />
-        <TextBox title={data.title} slogan={data.slogan} color={data.color} bgColor={data.bgColor} />
-    </div>
-{/if}
