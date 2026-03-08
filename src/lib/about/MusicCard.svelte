@@ -11,6 +11,7 @@
         <img src={song.coverArt} alt="cover art" class="cover-art">
         <div class="artist" style="color: {colors.artist}">{song.artist}</div>
         <div class="music-title" style="color: {colors.title}">{song.title}</div>
+        <p></p>
         <div class="play-buttons">
             <StarButton text="←" color={song.color} onclick={onPrev}/>
             <StarButton text="→" color={song.color} onclick={onNext}/>
