@@ -6,11 +6,12 @@
     import CvCard from "./CvCard.svelte";
     import SquareSelector from "./SquareSelector.svelte";
     import SlideButton from "../utils/SlideButton.svelte";
-    import ProjectsCell from "./ProjectsCell.svelte";
-    console.log(musicBoxData.length)
+    import CoolCell from "./CoolCell.svelte";
+    import internationalData from "../../assets/inter.json"
+    let { onNavigate } = $props();
+
     let selectedSong = $state(0)
     function changeSong(direction: number){
-        console.log(selectedSong)
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
     }
 
@@ -39,22 +40,28 @@
             --artist:      {colors().artist};
         ">
     <div class="grid">
-        <div class="cell"><p>Image cool</p></div>
-        <div class="cell"><p>Experience</p></div>
-        <div class="cell cv-square ">
+        <div class="cell span-col-2">
+            <CvCard src="" text="Développeur Fullstack créatif et bilingue"/>
+
+        </div>
+        <div class="cell cv-square span-col-2 ">
             <CvCard />
         </div>
-        <div class="cell "><p>Développeur Fullstack + Github Gitlab</p></div>
+
         <div class="cell span-col-2">
-            <ProjectsCell buttonText="Mes projets" image="./projects.png"/>
+            <CoolCell buttonText="Mes projets" image="./projects.png" onNavigate={() => onNavigate('projects')}/>
         </div>
-        <div class="cell"><p>Langues</p></div>
+        <div class="cell">
+            <SquareSelector data={internationalData}/>
+        </div>
         <div class="cell span-row-2 music-card">
             <MusicCard song={musicBoxData[selectedSong]} colors={colors()} onPrev={() => changeSong(-1)} onNext={() => changeSong(1)} />
         </div>
-        <div class="cell"><SquareSelector/></div>
+        <div class="cell">
+            <SquareSelector/>
+        </div>
         <div class="cell span-col-2">
-            <ProjectsCell buttonText="Mes compétences techniques"/>
+            <CoolCell buttonText="Mes compétences techniques" onNavigate={() => onNavigate('skills')}/>
         </div>
     </div>
 </div>

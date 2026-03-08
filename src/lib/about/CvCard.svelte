@@ -1,10 +1,10 @@
 <script lang="ts">
-    let { src = "./cv.png" } = $props();
+    let { src = "./cv.png", text="Découvrez mon CV"} = $props();
 </script>
 
 <div class="cv-square">
-    <img class="cv-image" {src} alt="CV"/>
-    <div class="black-filter">Découvrez mon CV</div>
+    <img class="cv-image" {src} alt="."/>
+    <div class="black-filter">{text}</div>
 </div>
 
 <style>
@@ -24,7 +24,7 @@
 
     .cv-image {
         width: 100%;
-        height: 150%;
+        height: 100%;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
