@@ -6,10 +6,8 @@
     import CvCard from "./CvCard.svelte";
     import SquareSelector from "./SquareSelector.svelte";
     import SlideButton from "../utils/SlideButton.svelte";
-    import CoolCell from "./CoolCell.svelte";
-    import internationalData from "../../assets/inter.json"
-    let { onNavigate } = $props();
-
+    import ProjectsCell from "./ProjectsCell.svelte";
+    console.log(musicBoxData.length)
     let selectedSong = $state(0)
     function changeSong(direction: number){
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
