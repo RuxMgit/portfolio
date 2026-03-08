@@ -3,7 +3,14 @@
     import HeroScene from './HeroScene.svelte'
     import {PerfMonitor} from "@threlte/extras";
 </script>
+<div class="canvas-container">
+    <Canvas rendererParameters={ {antialias: true} }>
+        <HeroScene />
+    </Canvas>
+</div>
 
-<Canvas rendererParameters={ {antialias: true} }>
-    <HeroScene />
-</Canvas>
+<style>
+    .canvas-container{
+        height: 100vh;
+    }
+</style>

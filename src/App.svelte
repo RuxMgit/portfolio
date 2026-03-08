@@ -6,11 +6,14 @@
     import HomePageButton from "./lib/HomePageButton.svelte";
     import Skills from "./lib/skills/Skills.svelte";
     import AboutSection from "./lib/about/AboutSection.svelte";
+    import Footer from "./lib/Footer.svelte";
+    import ExperienceSection from "./lib/experience/ExperienceSection.svelte";
 
     const Pages = {
         HOME : 0,
         PROJECTS : 1,
-        SKILLS : 2
+        SKILLS : 2,
+        CV : 3
     }
 
     let currentPage = $state(Pages.HOME)
@@ -25,6 +28,9 @@
         else if (buttonPath=="skills"){
             currentPage = Pages.SKILLS
         }
+        else if (buttonPath=="cv"){
+            currentPage = Pages.CV
+        }
     }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,26 +38,36 @@
     <TopBar onButtonClick={changePageFromButtonClick}/>
 
     {#if (currentPage === Pages.HOME)}
-        <div class="canvas-container">
+        <div class="homepage-container">
             <HeroCanvas/>
             <AboutSection/>
+            <ExperienceSection/>
         </div>
     {:else}
         <HomePageButton onButtonClick={changePageFromButtonClick}/>
         {#if (currentPage===Pages.PROJECTS)}
-                <Projects/>
-            {:else if (currentPage===Pages.SKILLS)}
-                <Skills/>
+            <Projects/>
+        {:else if (currentPage===Pages.SKILLS)}
+            <Skills/>
+        {:else if (currentPage===Pages.CV)}
+            <ExperienceSection/>
         {/if}
     {/if}
-
 </main>
+<Footer/>
 
 <style>
-    main {
+    :global(body) {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     :global(.topbar) {
@@ -62,11 +78,9 @@
         z-index: 100;
     }
 
-
-    .canvas-container {
-        height: 100vh;
-        width: 100vw;
+    .homepage-container {
+        display: flex;
+        flex-direction: column;
         padding-top: 60px;
     }
-
 </style>

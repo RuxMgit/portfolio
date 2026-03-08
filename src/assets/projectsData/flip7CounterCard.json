@@ -6,5 +6,5 @@
   "slogan" : "Plus besoin de compter les points au Flip7 avec Jetpack Compose!",
   "color" : "#e84f64",
   "bgColor" : "#fff6d9",
-  "description" : "Exemple"
+  "description" : "J'adore le Flip7, je pense que c'est un de mes jeux de société préféré et j'y joue assez souvent. Or, dans ce jeu de société et comme dans beaucoup d'autres, il faut évidemment compter les points, et je me suis dit, dans un jeu ou les scores varient énormément. J'ai donc décidé que pour apprendre Jetpack-Compose pour Android, je ferais une application légère de comptage des points se basant sur un ViewModel. L'application est encore en développement mais avance bien et elle sera disponible sur mon GitHub."
 }

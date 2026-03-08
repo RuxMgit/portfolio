@@ -6,5 +6,5 @@
   "slogan" : "Revendeur de vêtements streetwear avec un site en PHP et une base de données relationnelle",
   "color" : "black",
   "bgColor" : "white",
-  "description" : "Exemple"
+  "description" : "Notre projet du semestre 3 de BUT nous demandais de créer un site web commerçant en PHP en utilisant CodeIgniter avec une base de données relationnelle. Nous avons donc décidé de créer un revendeur de marques streetwear indépendantes et françaises. Je me suis principalement occupé de la partie back-end avec la logique métier de la majeure partie du site, ainsi que du routage et de la persistence des données. Nous devions également fournir une analyse de l'utilisation des design-patterns et un dossier de communication."
 }

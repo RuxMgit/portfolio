@@ -45,7 +45,7 @@
         <div class="nav-separator"></div>
 
         <div class="nav-item">
-            <GlitchButton buttonText="Experience" onClick={handleButtonClick} buttonPath="projects"/>
+            <GlitchButton buttonText="CV" onClick={handleButtonClick} buttonPath="cv"/>
         </div>
     </nav>
 </div>

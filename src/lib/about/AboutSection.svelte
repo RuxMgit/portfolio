@@ -18,12 +18,17 @@
         const base = musicBoxData[selectedSong].color;
         return {
             border:     musicBoxData[selectedSong].colorOverride ?? chroma(base).saturate(1).hex(),
-            glow:       chroma(base).alpha(0.25).css(),
+            glow:       chroma(base).alpha(0.85).css(),
             title:      chroma(base).brighten(0.8).saturate(0.5).hex(),
             artist:     chroma(base).brighten(2).desaturate(1).hex(),
         };
     });
-
+    $effect(() => {
+        document.documentElement.style.setProperty('--border', colors().border);
+        document.documentElement.style.setProperty('--title', colors().title);
+        document.documentElement.style.setProperty('--glow', colors().glow);
+        document.documentElement.style.setProperty('--artist', colors().artist);
+    });
 
 </script>
 

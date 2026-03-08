@@ -6,5 +6,5 @@
     "slogan" : "API de récupération des décisions juridiques en 3 micro-services avec JavaScript et MongoDB",
     "color" : "#94A187",
     "bgColor" : "#29524A",
-    "description" : "Exemple"
+    "description" : "Pour notre projet de semestre 4 de BUT, nous étions chargés en équipes de 5 ou 6 de faire une API comportant 3 micro-services : un Proxy, un service externre qui récupérait des données depuis une API libre, et un service interne qui déclarait une base de données NoSQL. Nous avons donc choisi de faire une API de récupération des décisions juridiques nommée Judilibre, le service externe se connectait a une API du gouvernement, le service interne gérait la création et l'administration d'utilisateurs, et le proxy déclarait donc cette API. Nous devions également faire un dossier de communication  ainsi que créer des tests structurels, d'intégration et de non-régression."
 }

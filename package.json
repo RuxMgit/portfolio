@@ -15,6 +15,7 @@
     "@types/node": "^24.10.1",
     "svelte": "^5.45.2",
     "svelte-check": "^4.3.4",
+    "svelte-reveal": "^1.1.0",
     "typescript": "~5.9.3",
     "vite": "^7.3.1"
   },
