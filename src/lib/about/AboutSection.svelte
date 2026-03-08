@@ -6,8 +6,8 @@
     import CvCard from "./CvCard.svelte";
     import SquareSelector from "./SquareSelector.svelte";
     import SlideButton from "../utils/SlideButton.svelte";
-    import ProjectsCell from "./ProjectsCell.svelte";
-    console.log(musicBoxData.length)
+    import CoolCell from "./CoolCell.svelte";
+    import internationalData from "../../assets/inter.json"
     let selectedSong = $state(0)
     function changeSong(direction: number){
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
@@ -40,7 +40,6 @@
     <div class="grid">
         <div class="cell">
             <CvCard src="" text="Développeur Fullstack créatif et bilingue"/>
-
         </div>
         <div class="cell"><p>Experience</p></div>
         <div class="cell cv-square span-col-2 ">
