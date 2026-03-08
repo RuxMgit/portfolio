@@ -113,8 +113,7 @@
         left: 100.15% !important;
         right: auto !important;
         transform: translate(-50%, -50%) !important;
-        transition: transform 0.5s ease !important;
-
+        transition: transform 0.5s ease, color 0.4s ease !important;
     }
 
     :global(.timeline__item--right::after) {
@@ -144,6 +143,7 @@
         justify-content: center;
         background-color: #0d0d0d !important;
         border: 2px solid var(--border) !important;
+        transition: border-color 0.4s ease;
         border-radius: 3rem !important;
         overflow: hidden;
         color: white !important;
