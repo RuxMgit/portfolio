@@ -8,6 +8,8 @@
     import SlideButton from "../utils/SlideButton.svelte";
     import CoolCell from "./CoolCell.svelte";
     import internationalData from "../../assets/inter.json"
+    let { onNavigate } = $props();
+
     let selectedSong = $state(0)
     function changeSong(direction: number){
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
