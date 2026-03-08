@@ -2,7 +2,7 @@
     import SlideButton from "../utils/SlideButton.svelte";
     import SvelteTypedJs from 'svelte-typed-js'
 
-    let {buttonText, image} = $props()
+    let {buttonText, image, onNavigate} = $props()
 
     import codeLines from "../../assets/codeLines.json"
 
@@ -27,7 +27,7 @@
         </SvelteTypedJs>
     {/if}
     <div class="dark-filter">
-        <SlideButton text={buttonText}/>
+        <SlideButton text={buttonText} onClick={onNavigate}/>
     </div>
 
 </div>

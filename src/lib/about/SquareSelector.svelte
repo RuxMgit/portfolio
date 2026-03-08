@@ -2,7 +2,10 @@
     import useEmblaCarousel from 'embla-carousel-svelte'
     import type { EmblaCarouselType } from 'embla-carousel'
     import Autoplay from 'embla-carousel-autoplay'
+
     import gamesData from '../../assets/gamesData.json'
+
+    let {data = gamesData} = $props()
 
     let emblaApi: EmblaCarouselType | undefined
     let options = { loop: true }
@@ -29,7 +32,7 @@
             use:useEmblaCarousel={{ options, plugins }}
     >
         <div class="embla__container">
-            {#each gamesData as slide}
+            {#each data as slide}
                 <div
                         class="embla__slide"
                         style="background-image: url({slide.image});"

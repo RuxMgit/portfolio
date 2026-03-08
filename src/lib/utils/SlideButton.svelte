@@ -1,13 +1,13 @@
 <script lang="ts">
-    let {text} = $props()
+    let {text, onClick} = $props()
 </script>
 
-<div class="fancy">
+<a class="fancy" onclick={onClick}>
     <span class="top-key"></span>
     <span class="text">{text}</span>
     <span class="bottom-key-1"></span>
     <span class="bottom-key-2"></span>
-</div>
+</a>
 
 <style>
     .fancy {

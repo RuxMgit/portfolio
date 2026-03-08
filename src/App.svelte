@@ -31,6 +31,7 @@
         else if (buttonPath=="cv"){
             currentPage = Pages.CV
         }
+        window.scrollTo({ top: 0, behavior: 'instant' });
     }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +41,7 @@
     {#if (currentPage === Pages.HOME)}
         <div class="homepage-container">
             <HeroCanvas/>
-            <AboutSection/>
+            <AboutSection onNavigate={changePageFromButtonClick}/>
             <ExperienceSection/>
         </div>
     {:else}
@@ -54,7 +55,7 @@
         {/if}
     {/if}
 </main>
-<Footer/>
+<!--<Footer/>-->
 
 <style>
     :global(body) {
