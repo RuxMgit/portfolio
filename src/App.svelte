@@ -8,6 +8,8 @@
     import AboutSection from "./lib/about/AboutSection.svelte";
     import Footer from "./lib/Footer.svelte";
     import ExperienceSection from "./lib/experience/ExperienceSection.svelte";
+    import Contact from "./lib/Contact.svelte";
+    import ScreenSizeWarning from "./lib/ScreenSizeWarning.svelte";
 
     const Pages = {
         HOME : 0,
@@ -36,6 +38,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <main>
+<ScreenSizeWarning>
     <TopBar onButtonClick={changePageFromButtonClick}/>
 
     {#if (currentPage === Pages.HOME)}
@@ -43,17 +46,20 @@
             <HeroCanvas/>
             <AboutSection onNavigate={changePageFromButtonClick}/>
             <ExperienceSection/>
+            <Contact/>
         </div>
     {:else}
         <HomePageButton onButtonClick={changePageFromButtonClick}/>
         {#if (currentPage===Pages.PROJECTS)}
             <Projects/>
+            <Contact/>
         {:else if (currentPage===Pages.SKILLS)}
             <Skills/>
         {:else if (currentPage===Pages.CV)}
             <ExperienceSection/>
         {/if}
     {/if}
+</ScreenSizeWarning>
 </main>
 <!--<Footer/>-->
 

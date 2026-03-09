@@ -109,11 +109,10 @@
         <div
                 class="ball-wrapper"
                 style="
-                left: {ball.x - RADIUS}px;
-                top: {ball.y - RADIUS}px;
-                width: {RADIUS * 2}px;
-                height: {RADIUS * 2}px;
-            "
+                    width: {RADIUS * 2}px;
+                    height: {RADIUS * 2}px;
+                    transform: translate({ball.x - RADIUS}px, {ball.y - RADIUS}px)
+                "
         >
             <BubbleCard
                     data={ball}

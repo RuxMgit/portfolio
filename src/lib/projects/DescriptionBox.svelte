@@ -1,8 +1,11 @@
 <script lang="ts">
     let {text, color, bgColor} = $props()
+    import { fade, blur } from 'svelte/transition'
+
 </script>
 
-<div class="description-box" style="--c: {bgColor}; --bg: {color}">
+<div class="description-box" style="--c: {bgColor}; --bg: {color}" in:fade={{ duration: 200 }}>>
+
     {@html text}
 </div>
 <style>

@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Star from "./utils/Star.svelte";
+
     let {onButtonClick} = $props()
 
 </script>
@@ -52,6 +54,6 @@
 
 <div class="home-page-button">
     <button class="rotating" onclick={()=>onButtonClick("home")}>
-        <p>{"\uF0A0"}</p>
+        <Star/>
     </button>
 </div>

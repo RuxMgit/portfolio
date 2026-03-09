@@ -11,11 +11,15 @@
     let { onNavigate } = $props();
 
     let selectedSong = $state(0)
+    let timerId =0
+
     function changeSong(direction: number){
+        clearTimeout(timerId)
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
+        timerId = setTimeout(()=>{changeSong(direction)},5000)
     }
 
-    setTimeout(()=>{changeSong(1)},3000)
+    timerId = setTimeout(()=>{changeSong(1)},5000)
 
     let colors = $derived(() => {
         const base = musicBoxData[selectedSong].color;
@@ -46,7 +50,7 @@
             <CvCard src="./abstract/skelet.png" text="Développeur Fullstack créatif et bilingue"/>
         </div>
         <div class="cell">
-            <CvCard src="./abstract/butterflypink.png" text=""/>
+            <CvCard src="./abstract/pwaso.png" text=""/>
 
         </div>
         <div class="cell cv-square span-col-2 ">

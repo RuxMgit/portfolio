@@ -1,6 +1,7 @@
 <script lang="ts">
     export let imagePaths: string[] = [];
     export let color: string = "#000";
+    import { fade } from 'svelte/transition'
 
     $: count = imagePaths.length;
 </script>
@@ -51,7 +52,7 @@
     .gap-col { display: flex; flex-direction: column; flex: 1; gap: 2px; }
 </style>
 
-<div class="image-box">
+<div class="image-box" in:fade={{ duration: 200 }}>
     {#if count === 0}
         <div class="img-wrap">
             <div class="placeholder"><div class="placeholder-inner"></div></div>

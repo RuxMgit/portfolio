@@ -50,11 +50,31 @@
         user-select: none;
         touch-action: none;
         transition: transform 0.15s;
+        position: relative;
     }
 
     .ball:hover {
         transform: scale(1.08);
     }
+
+    .ball::before{
+        transform: scale(0);
+        transition: transform 0.5s ease-out;
+        content:"";
+        position: absolute;
+        background: var(--color, white);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        opacity: 0.6;
+    }
+
+    .ball:hover::before{
+        transform: scale(1);
+        transition: transform 1s;
+
+    }
+
 
     .ball-icon {
         width: 28px;
@@ -70,6 +90,6 @@
         color: rgba(255, 255, 255, 0.9);
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 </style>
