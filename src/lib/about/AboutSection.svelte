@@ -15,6 +15,8 @@
         selectedSong = (selectedSong + direction + musicBoxData.length) % musicBoxData.length;
     }
 
+    setTimeout(()=>{changeSong(1)},3000)
+
     let colors = $derived(() => {
         const base = musicBoxData[selectedSong].color;
         return {
@@ -41,9 +43,12 @@
         ">
     <div class="grid">
         <div class="cell">
-            <CvCard src="" text="Développeur Fullstack créatif et bilingue"/>
+            <CvCard src="./abstract/skelet.png" text="Développeur Fullstack créatif et bilingue"/>
         </div>
-        <div class="cell"><p>Experience</p></div>
+        <div class="cell">
+            <CvCard src="./abstract/butterflypink.png" text=""/>
+
+        </div>
         <div class="cell cv-square span-col-2 ">
             <CvCard />
         </div>

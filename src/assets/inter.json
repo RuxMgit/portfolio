@@ -1,7 +1,7 @@
 [
     {
         "title": "Anglais C1 (TOEIC L+R)",
-        "image": "./inter.jpeg"
+        "image": "./abstract/moon.png"
     },
     {
         "title": "Français natal",
@@ -9,6 +9,6 @@
     },
     {
         "title": "Allemand basique",
-        "image": "./germ.jpeg"
+        "image": "./abstract/bandw.png"
     }
 ]
