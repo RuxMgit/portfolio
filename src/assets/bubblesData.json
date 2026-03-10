@@ -11,7 +11,7 @@
         "label": "JavaScript/TypeScript",
         "color": "#FFD93D",
         "iconPath": "./icons/javascript.svg",
-        "description": "Langage principalement orienté web, je l'ai utilisé pendant mon cursus pour créer des APIs et manipuler du front-end. Je maitrise Svelte, Three.js, GraphQL, node.JS, Vite et React"
+        "description": "Langage principalement orienté web, je l'ai utilisé pendant mon cursus pour créer des APIs et manipuler du front-end. Je maitrise Svelte, Three.js, GraphQL, node.JS, Vite et React. Le portfolio que vous regardez actuellement a été fait en Svelte avec Typescript"
     },
     {
         "id": 3,
