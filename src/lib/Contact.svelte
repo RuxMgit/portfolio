@@ -41,6 +41,10 @@
                 <span class="thanks-name">Angy-Milkshake</span>
                 — soutien moral tout au long du développement
             </li>
+            <li>
+                <span class="thanks-name">NokNok</span>
+                — inspiration et motivation pour faire ce portfolio et sagesse jenkinsesque
+            </li>
         </ul>
     </div>
 </div>
@@ -76,14 +80,14 @@
         font-size: 2rem;
         color: var(--title);
         letter-spacing: -0.02em;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 
     .title-line {
         width: 40px;
         height: 2px;
         background: var(--border);
-        transition: background 0.2s ease;
+        transition: background 0.4s ease;
     }
 
     .contact-infos {
@@ -100,7 +104,7 @@
         text-decoration: none;
         font-size: 0.8rem;
         letter-spacing: 0.03em;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 
     .contact-link:hover,
@@ -115,7 +119,7 @@
         text-align: center;
         color: var(--border);
         opacity: 0.8;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 
     .right-col {
@@ -124,7 +128,7 @@
         gap: 1.2rem;
         border-left: 1px solid color-mix(in srgb, var(--border) 30%, transparent);
         padding-left: 4rem;
-        transition: border-left-color 0.2s ease;
+        transition: border-left-color 0.4s ease;
     }
 
     .thanks-title {
@@ -134,7 +138,7 @@
         text-transform: uppercase;
         color: var(--border);
         margin: 0;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 
     .thanks-list {
@@ -150,13 +154,13 @@
         font-size: 0.78rem;
         color: color-mix(in srgb, var(--artist) 60%, transparent);
         line-height: 1.5;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 
     .thanks-name {
         color: var(--artist);
         font-weight: 400;
         text-decoration: none;
-        transition: color 0.2s ease;
+        transition: color 0.4s ease;
     }
 </style>

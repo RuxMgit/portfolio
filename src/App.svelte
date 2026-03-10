@@ -10,6 +10,7 @@
     import ExperienceSection from "./lib/experience/ExperienceSection.svelte";
     import Contact from "./lib/Contact.svelte";
     import ScreenSizeWarning from "./lib/ScreenSizeWarning.svelte";
+    import CvPage from "./lib/CvPage.svelte";
 
     const Pages = {
         HOME : 0,
@@ -56,7 +57,7 @@
         {:else if (currentPage===Pages.SKILLS)}
             <Skills/>
         {:else if (currentPage===Pages.CV)}
-            <ExperienceSection/>
+            <CvPage/>
         {/if}
     {/if}
 </ScreenSizeWarning>
@@ -88,6 +89,6 @@
     .homepage-container {
         display: flex;
         flex-direction: column;
-        padding-top: 60px;
+        padding-top: 1rem;
     }
 </style>

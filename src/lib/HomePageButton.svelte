@@ -24,6 +24,11 @@
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
         border: none;
     }
+    svg{
+        width: 64px !important;
+        height: 64px !important;
+    }
+
     .rotating:hover{
         animation: rotating 1s ease-in-out infinite 0.2s;
     }
@@ -37,13 +42,6 @@
         }
     }
 
-    p {
-        font-family: coolFont,serif;
-        font-size: 8rem;
-        margin: 0;
-        line-height: 1;
-        transform: translateY(0.3rem)
-    }
     :global(.home-page-button) {
         position: fixed;
         bottom: 2rem;
@@ -54,6 +52,6 @@
 
 <div class="home-page-button">
     <button class="rotating" onclick={()=>onButtonClick("home")}>
-        <Star/>
+        <Star width={64} height={64}/>
     </button>
 </div>
