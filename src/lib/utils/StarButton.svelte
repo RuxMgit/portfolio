@@ -30,7 +30,7 @@
     {#each stars as star}
         <div style="transform: translate({star.x}px, {star.y}px)" class="star-wrapper">
             <Star color={star.color}/>
-        </div>overflow: visible;
+        </div>
     {/each}
 </button>
 
@@ -41,7 +41,6 @@
     }
 
     .star-wrapper{
-        position: absolute;
         width: 100px;
         height: 100px;
     }
@@ -60,9 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        outline: none;
-        border: none;
-        overflow: visible;
+        outline: none
     }
     button:focus {outline: none}
 
