@@ -6,9 +6,10 @@
 
 <svelte:window bind:innerWidth={myInnerWidth}/>
 
-{#if myInnerWidth < 1650}
+{#if myInnerWidth < 100}
     <div class="error-message">
-        Bonjour, ce site web a été conçu pour des appareils ayant une largeur d'écran supérieure à 1650
+        {myInnerWidth}
+        Bonjour, ce site web a été conçu pour des appareils ayant une largeur d'écran supérieure à 980
     </div>
 {:else}
     {@render children?.()}

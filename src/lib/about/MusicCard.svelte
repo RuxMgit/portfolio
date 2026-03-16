@@ -39,8 +39,12 @@
     .card-wrapper{
         display: flex;
         flex-direction: column;
-        align-content: center;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
 
     }
 
@@ -58,18 +62,19 @@
         border-radius: 1rem;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        max-height: 100%;
+        max-height: 50%;
+        flex-shrink: 1;
     }
 
     .artist {
-        font-size: clamp(1.2rem, 5vw, 2.2rem);
+        font-size: clamp(0.8rem, 2.5vw, 2.2rem);;
         letter-spacing: 0.03em;
         text-align: center;
-        flex-shrink: 0;
+        flex-shrink: 1;
     }
 
     .music-title {
-        font-size: clamp(2rem, 8vw, 4rem);
+        font-size: clamp(1.2rem, 4vw, 4rem);;
         line-height: 1;
         text-align: center;
         word-break: break-word;
@@ -81,8 +86,8 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 0 0.5rem;
         box-sizing: border-box;
         flex-shrink: 0;
+        padding-bottom: 0.5rem;
     }
 </style>

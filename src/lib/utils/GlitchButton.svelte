@@ -20,13 +20,14 @@
         font-family: "VT323", monospace;
         border: 1px solid rgb(255, 255, 255);
         color: rgb(255, 255, 255);
-        padding: 10px 13px;
-        min-width: 175px;
         line-height: 1.5em;
         white-space: nowrap;
         text-transform: uppercase;
         cursor: pointer;
-        border-radius: 15px;
+        border-radius: 0.6rem;
+        padding: clamp(6px, 0.8vw, 10px) clamp(8px, 1vw, 13px);
+        min-width: clamp(120px, 12vw, 175px);
+        font-size: clamp(0.75rem, 1.2vw, 1rem);
 
         .text,
         .decoration {

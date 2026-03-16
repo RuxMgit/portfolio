@@ -14,7 +14,7 @@
     .navBar{
         display: flex;
         align-items: center;
-        padding: 1rem 2rem;
+        padding: clamp(0.5rem, 1vh, 1rem) clamp(1rem, 2vw, 2rem);
     }
 
     .nav-item{

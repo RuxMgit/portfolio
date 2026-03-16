@@ -83,7 +83,8 @@
 
     .about-container {
         height: 100vh;
-        padding :5rem;
+        max-height: 900px;
+        padding: clamp(1rem, 3vw, 5rem);;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -95,8 +96,9 @@
         width: 100%;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        gap: 16px;
+        gap: clamp(8px, 1vw, 16px);;
         padding: 8px;
+        min-height: 0;
     }
 
     .cell {
@@ -105,7 +107,7 @@
         justify-content: center;
         background-color: #0d0d0d;
         border: 2px solid var(--border);
-        border-radius: 3rem;
+        border-radius: clamp(1rem, 2vw, 3rem);;
         overflow: hidden;
         transition: border-color 0.4s ease;
     }

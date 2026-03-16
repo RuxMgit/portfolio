@@ -85,9 +85,9 @@
     .timeline-container {
         padding-top: 5rem;
         display: flex;
-        height: 100vh;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 4rem;
     }
 
     .timeline {

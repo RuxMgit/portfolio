@@ -40,7 +40,7 @@
         justify-content: center;
         text-align: center;
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 3rem;
+        font-size: clamp(1.2rem, 2.5vw, 3rem);
         color: white;
     }
 </style>
