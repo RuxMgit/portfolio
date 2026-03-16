@@ -6,7 +6,6 @@
     import HomePageButton from "./lib/HomePageButton.svelte";
     import Skills from "./lib/skills/Skills.svelte";
     import AboutSection from "./lib/about/AboutSection.svelte";
-    import Footer from "./lib/Footer.svelte";
     import ExperienceSection from "./lib/experience/ExperienceSection.svelte";
     import Contact from "./lib/Contact.svelte";
     import ScreenSizeWarning from "./lib/ScreenSizeWarning.svelte";
