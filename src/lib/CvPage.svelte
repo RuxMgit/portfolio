@@ -6,7 +6,7 @@ import SlideButton from "./utils/SlideButton.svelte";
     <img src="./cv.png" alt="mon cv" class="cv">
     <p></p>
     <a href="./cv.pdf" download="CV Morisset Eliott" class="downloadbutton">
-        <SlideButton text={"Télécharger \u2B73"}/>
+        <SlideButton text={"Téléchargez mon CV"}/>
     </a>
 </div>
 

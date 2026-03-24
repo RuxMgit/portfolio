@@ -30,7 +30,7 @@
                 <a href="https://linktr.ee/rak_inc" target="_blank" class="thanks-name">trouvez ses créations ici!!</a>
             </li>
             <li>
-                <span class="thanks-name">Ami précieux</span>
+                <span class="thanks-name">Ami Précieux 65</span>
                 — GIGANTESQUE aide sur la partie code et design tout au long du développement
             </li>
             <li>
@@ -43,7 +43,7 @@
             </li>
             <li>
                 <span class="thanks-name">NokNok</span>
-                — inspiration et motivation pour faire ce portfolio et sagesse jenkinsesque
+                — inspiration et motivation pour faire ce portfolio et sagesse Jenkinsesque
             </li>
         </ul>
     </div>

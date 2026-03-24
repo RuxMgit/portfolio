@@ -1,11 +1,9 @@
 <script lang="ts">
     import musicBoxData from "../../assets/musicBoxData.json";
-    import StarButton from "../utils/StarButton.svelte";
     import chroma from 'chroma-js';
     import MusicCard from "./MusicCard.svelte";
     import CvCard from "./CvCard.svelte";
     import SquareSelector from "./SquareSelector.svelte";
-    import SlideButton from "../utils/SlideButton.svelte";
     import CoolCell from "./CoolCell.svelte";
     import internationalData from "../../assets/inter.json"
     let { onNavigate } = $props();
@@ -53,7 +51,8 @@
             <CvCard src="./abstract/pwaso.png" text=""/>
 
         </div>
-        <div class="cell cv-square span-col-2 ">
+        <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions, a11y_no_static_element_interactions -->
+        <div class="cell cv-square span-col-2 " onclick={() => onNavigate('cv')}>
             <CvCard />
         </div>
 
